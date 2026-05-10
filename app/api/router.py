@@ -1,6 +1,15 @@
 from fastapi import APIRouter
 
-from app.api.routes import benchmark, documents, evaluation, experiments, health, query, registry
+from app.api.routes import (
+    benchmark,
+    documents,
+    evaluation,
+    experiments,
+    health,
+    observability,
+    query,
+    registry,
+)
 
 api_router = APIRouter()
 api_router.include_router(health.router, tags=["health"])
@@ -10,4 +19,4 @@ api_router.include_router(evaluation.router, tags=["evaluation"])
 api_router.include_router(benchmark.router, tags=["benchmarking"])
 api_router.include_router(experiments.router, tags=["experiments"])
 api_router.include_router(registry.router, tags=["registry"])
-
+api_router.include_router(observability.router, tags=["observability"])

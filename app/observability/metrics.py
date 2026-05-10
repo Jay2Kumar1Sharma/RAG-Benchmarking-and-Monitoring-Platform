@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Response
-from prometheus_client import Counter, Histogram, generate_latest
+from prometheus_client import Counter, Gauge, Histogram, generate_latest
 
 metrics_router = APIRouter()
 
@@ -11,6 +11,9 @@ GENERATION_LATENCY = Histogram("rag_generation_latency_seconds", "LLM generation
 EVALUATION_LATENCY = Histogram("rag_evaluation_latency_seconds", "Evaluation latency", ["workflow"])
 HALLUCINATION_RATE = Histogram("rag_hallucination_score", "Hallucination score distribution")
 TOKEN_USAGE = Counter("rag_token_usage_total", "Token usage", ["provider", "type"])
+BENCHMARK_RUNS_TOTAL = Counter("rag_benchmark_runs_total", "Benchmark runs")
+BENCHMARK_QUALITY = Gauge("rag_benchmark_quality_score", "Benchmark quality score", ["variant"])
+BENCHMARK_LATENCY_P95 = Gauge("rag_benchmark_p95_latency_ms", "Benchmark p95 latency", ["variant"])
 
 
 @metrics_router.get("/metrics")

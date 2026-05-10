@@ -15,7 +15,7 @@ Example payload:
 }
 ```
 
-Benchmark results are shaped as leaderboard rows so the dashboard and experiment tracker can compare variants over time.
+Benchmark results are shaped as leaderboard rows so the dashboard and experiment tracker can compare variants over time. JSON reports are written to `metrics/benchmarks/` and the latest summary feeds `/api/v1/observability/summary`.
 
 ## Retrieval And Reranking Variants
 
@@ -37,4 +37,4 @@ Supported rerankers:
 - `bge`
 - `cohere`
 
-Query requests can tune `top_k`, `rerank_top_k`, `score_threshold`, and `dense_weight`.
+Benchmark variants can tune `top_k`, `rerank_top_k`, retriever, reranker, embedding model, chunk size, and prompt name. Query requests can tune `top_k`, `rerank_top_k`, `score_threshold`, and `dense_weight`.

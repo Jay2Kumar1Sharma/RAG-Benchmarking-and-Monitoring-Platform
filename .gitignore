@@ -21,3 +21,4 @@ build/
 node_modules/
 graphify-out/cache/
 metrics/reports/
+metrics/benchmarks/

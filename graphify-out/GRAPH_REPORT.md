@@ -1,12 +1,12 @@
 # Graph Report - RAG_Benchmarking_and_Monitoring_Platform  (2026-05-10)
 
 ## Corpus Check
-- 83 files · ~9,451 words
+- 89 files · ~10,473 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 423 nodes · 824 edges · 34 communities detected
-- Extraction: 59% EXTRACTED · 41% INFERRED · 0% AMBIGUOUS · INFERRED: 340 edges (avg confidence: 0.63)
+- 455 nodes · 881 edges · 34 communities detected
+- Extraction: 60% EXTRACTED · 40% INFERRED · 0% AMBIGUOUS · INFERRED: 355 edges (avg confidence: 0.63)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
@@ -29,7 +29,7 @@
 - [[_COMMUNITY_Community 16|Community 16]]
 - [[_COMMUNITY_Community 17|Community 17]]
 - [[_COMMUNITY_Community 18|Community 18]]
-- [[_COMMUNITY_Community 19|Community 19]]
+- [[_COMMUNITY_Community 21|Community 21]]
 - [[_COMMUNITY_Community 22|Community 22]]
 - [[_COMMUNITY_Community 23|Community 23]]
 - [[_COMMUNITY_Community 27|Community 27]]
@@ -42,8 +42,8 @@
 - [[_COMMUNITY_Community 36|Community 36]]
 - [[_COMMUNITY_Community 37|Community 37]]
 - [[_COMMUNITY_Community 38|Community 38]]
+- [[_COMMUNITY_Community 45|Community 45]]
 - [[_COMMUNITY_Community 46|Community 46]]
-- [[_COMMUNITY_Community 47|Community 47]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `TextChunk` - 59 edges
@@ -72,40 +72,40 @@
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 0.13
-Nodes (24): ABC, RetrievalResult, EmbeddingProvider, QueryTransformer, RetrievalFactory, _average_length(), _bm25_score(), BM25Retriever (+16 more)
+Cohesion: 0.09
+Nodes (27): ABC, RetrievalResult, CachedEmbeddingProvider, EmbeddingProvider, OpenAIEmbeddingProvider, QueryTransformer, RetrievalFactory, _average_length() (+19 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.07
-Nodes (16): ChunkingConfig, CachedEmbeddingProvider, HashEmbeddingProvider, OpenAIEmbeddingProvider, Deterministic local fallback used for tests and offline development., SentenceTransformerEmbeddingProvider, chunk_fingerprint(), content_hash() (+8 more)
+Cohesion: 0.08
+Nodes (30): EvaluationEngine, _performance_from_example(), to_text_chunks(), answer_relevance(), faithfulness(), groundedness(), semantic_similarity(), _sentences() (+22 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.11
-Nodes (20): EvaluationEngine, _performance_from_example(), to_text_chunks(), answer_relevance(), faithfulness(), groundedness(), semantic_similarity(), _sentences() (+12 more)
+Cohesion: 0.14
+Nodes (17): Base, Base, BenchmarkRun, Chunk, Document, EvaluationResult, Experiment, LatencyMetric (+9 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.12
-Nodes (19): BaseModel, BenchmarkRunner, _variant_score(), health(), BenchmarkRequest, BenchmarkResponse, BenchmarkVariant, HealthResponse (+11 more)
+Cohesion: 0.1
+Nodes (19): BaseModel, ContextCompressor, health(), dashboard_summary(), rerankers(), retrievers(), HealthResponse, SourceChunk (+11 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.12
-Nodes (14): TextChunk, build_chunker(), Chunker, Sentence-window semantic chunking without requiring a model at import time., RecursiveChunker, SemanticChunker, BGEReranker, CohereReranker (+6 more)
+Nodes (15): TextChunk, build_chunker(), Chunker, ChunkingConfig, Sentence-window semantic chunking without requiring a model at import time., RecursiveChunker, SemanticChunker, BGEReranker (+7 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.18
-Nodes (16): Base, Base, BenchmarkRun, Chunk, Document, EvaluationResult, Experiment, LatencyMetric (+8 more)
+Cohesion: 0.11
+Nodes (15): BenchmarkReportWriter, BenchmarkRunner, _latency_score(), _score_variant(), _variant_score(), ExperimentTracker, LangSmithTracker, MLflowTracker (+7 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.15
-Nodes (7): GenerationResult, ContextCompressor, GeminiLLM, GroqLLM, LLMProvider, MockGroundedLLM, OpenAILLM
+Cohesion: 0.11
+Nodes (8): SentenceTransformerEmbeddingProvider, build_embedding_provider(), build_vector_store(), _cosine(), FaissVectorStore, InMemoryVectorStore, QdrantVectorStore, FAISS-backed store when faiss-cpu is installed, with in-memory behavior as fallb
 
 ### Community 7 - "Community 7"
-Cohesion: 0.14
-Nodes (7): build_embedding_provider(), build_vector_store(), _cosine(), FaissVectorStore, InMemoryVectorStore, QdrantVectorStore, FAISS-backed store when faiss-cpu is installed, with in-memory behavior as fallb
+Cohesion: 0.15
+Nodes (11): HashEmbeddingProvider, Deterministic local fallback used for tests and offline development., chunk_fingerprint(), content_hash(), metadata_for_upload(), read_upload_bytes(), DocumentIngestionItem, DocumentIngestionResponse (+3 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.17
-Nodes (11): _citation_coverage(), _citation_precision(), _citations(), _contradiction_score(), HallucinationDetector, HallucinationReport, _split_sentences(), EvaluationReportWriter (+3 more)
+Cohesion: 0.18
+Nodes (12): BenchmarkCase, _case_from_mapping(), load_benchmark_cases(), _load_csv(), _load_json(), _load_jsonl(), _average(), DashboardSnapshot (+4 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.18
@@ -116,16 +116,16 @@ Cohesion: 0.16
 Nodes (9): get_benchmark_service(), get_evaluation_service(), get_experiment_service(), get_ingestion_service(), get_rag_service(), ExperimentCreate, ExperimentResponse, ExperimentService (+1 more)
 
 ### Community 11 - "Community 11"
+Cohesion: 0.23
+Nodes (6): GenerationResult, GeminiLLM, GroqLLM, LLMProvider, MockGroundedLLM, OpenAILLM
+
+### Community 12 - "Community 12"
 Cohesion: 0.15
 Nodes (7): create_app(), lifespan(), AppError, install_exception_handlers(), configure_logging(), Exception, test_health_endpoint()
 
-### Community 12 - "Community 12"
+### Community 13 - "Community 13"
 Cohesion: 0.25
 Nodes (2): JsonCache, RedisJsonCache
-
-### Community 13 - "Community 13"
-Cohesion: 0.31
-Nodes (4): ExperimentTracker, LangSmithTracker, MLflowTracker, NoopExperimentTracker
 
 ### Community 14 - "Community 14"
 Cohesion: 0.29
@@ -140,16 +140,16 @@ Cohesion: 0.5
 Nodes (3): _create_operational_table(), initial schema  Revision ID: 0001_initial_schema Revises: Create Date: 2026-05-1, upgrade()
 
 ### Community 17 - "Community 17"
-Cohesion: 0.5
-Nodes (3): rerankers(), retrievers(), ComponentListResponse
-
-### Community 18 - "Community 18"
 Cohesion: 0.4
 Nodes (2): DeepEvalAdapter, RagasAdapter
 
-### Community 19 - "Community 19"
+### Community 18 - "Community 18"
 Cohesion: 0.5
 Nodes (2): BaseHTTPMiddleware, RequestContextMiddleware
+
+### Community 21 - "Community 21"
+Cohesion: 1.0
+Nodes (2): loadSummary(), render()
 
 ### Community 22 - "Community 22"
 Cohesion: 1.0
@@ -199,24 +199,26 @@ Nodes (1): Pydantic schemas for API contracts.
 Cohesion: 1.0
 Nodes (1): Application service layer.
 
-### Community 46 - "Community 46"
+### Community 45 - "Community 45"
 Cohesion: 1.0
 Nodes (1): Placeholder seam for Tesseract, Azure OCR, or layout-aware enterprise OCR.
 
-### Community 47 - "Community 47"
+### Community 46 - "Community 46"
 Cohesion: 1.0
 Nodes (1): Deterministic local fallback used for tests and offline development.
 
 ## Knowledge Gaps
 - **18 isolated node(s):** `initial schema  Revision ID: 0001_initial_schema Revises: Create Date: 2026-05-1`, `Enterprise RAG evaluation and observability platform.`, `Agentic retrieval orchestration.`, `Benchmark execution and experiment comparison.`, `Configuration package reserved for environment-specific settings.` (+13 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `Community 12`** (11 nodes): `cache.py`, `JsonCache`, `.get()`, `.__init__()`, `.invalidate()`, `.set()`, `RedisJsonCache`, `.get()`, `.__init__()`, `.invalidate()`, `._redis()`
+- **Thin community `Community 13`** (11 nodes): `cache.py`, `JsonCache`, `.get()`, `.__init__()`, `.invalidate()`, `.set()`, `RedisJsonCache`, `.get()`, `.__init__()`, `.invalidate()`, `._redis()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 15`** (6 nodes): `RetrievalAgent`, `.__init__()`, `.plan()`, `retrieval_agent.py`, `workflows.py`, `build_langgraph_workflow()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 18`** (5 nodes): `adapters.py`, `DeepEvalAdapter`, `.evaluate()`, `RagasAdapter`, `.evaluate()`
+- **Thin community `Community 17`** (5 nodes): `adapters.py`, `DeepEvalAdapter`, `.evaluate()`, `RagasAdapter`, `.evaluate()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 19`** (4 nodes): `middleware.py`, `BaseHTTPMiddleware`, `RequestContextMiddleware`, `.dispatch()`
+- **Thin community `Community 18`** (4 nodes): `middleware.py`, `BaseHTTPMiddleware`, `RequestContextMiddleware`, `.dispatch()`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 21`** (3 nodes): `main.js`, `loadSummary()`, `render()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 22`** (2 nodes): `__init__.py`, `Enterprise RAG evaluation and observability platform.`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
@@ -242,20 +244,20 @@ Nodes (1): Deterministic local fallback used for tests and offline development.
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 38`** (2 nodes): `__init__.py`, `Application service layer.`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 46`** (1 nodes): `Placeholder seam for Tesseract, Azure OCR, or layout-aware enterprise OCR.`
+- **Thin community `Community 45`** (1 nodes): `Placeholder seam for Tesseract, Azure OCR, or layout-aware enterprise OCR.`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 47`** (1 nodes): `Deterministic local fallback used for tests and offline development.`
+- **Thin community `Community 46`** (1 nodes): `Deterministic local fallback used for tests and offline development.`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `TextChunk` connect `Community 4` to `Community 0`, `Community 1`, `Community 2`, `Community 3`, `Community 6`, `Community 7`, `Community 8`?**
-  _High betweenness centrality (0.260) - this node is a cross-community bridge._
-- **Why does `RagService` connect `Community 3` to `Community 0`, `Community 4`, `Community 5`, `Community 6`, `Community 10`?**
-  _High betweenness centrality (0.134) - this node is a cross-community bridge._
-- **Why does `EvaluationEngine` connect `Community 2` to `Community 8`, `Community 3`, `Community 4`?**
-  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+- **Why does `TextChunk` connect `Community 4` to `Community 0`, `Community 1`, `Community 3`, `Community 6`, `Community 7`, `Community 11`?**
+  _High betweenness centrality (0.244) - this node is a cross-community bridge._
+- **Why does `RagService` connect `Community 3` to `Community 0`, `Community 2`, `Community 4`, `Community 10`, `Community 11`?**
+  _High betweenness centrality (0.129) - this node is a cross-community bridge._
+- **Why does `EvaluationEngine` connect `Community 1` to `Community 2`, `Community 3`, `Community 4`?**
+  _High betweenness centrality (0.086) - this node is a cross-community bridge._
 - **Are the 58 inferred relationships involving `TextChunk` (e.g. with `EvaluationEngine` and `HallucinationReport`) actually correct?**
   _`TextChunk` has 58 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 22 inferred relationships involving `RagService` (e.g. with `QueryHistory` and `QueryHistoryRepository`) actually correct?**

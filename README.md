@@ -14,6 +14,7 @@ This project is an enterprise-style local LLMOps platform for measuring and impr
 - Grounded generation provider interface with citation-aware local fallback.
 - Evaluation metrics for retrieval, generation, hallucination, and semantic similarity.
 - Benchmark runner and lightweight dashboard starter.
+- Dashboard summary API for local observability.
 - PostgreSQL schema via SQLAlchemy and Alembic.
 - Graphify code graph artifacts in `graphify-out/`.
 
@@ -45,6 +46,7 @@ Open:
 - `POST /api/v1/benchmark`
 - `GET /api/v1/experiments`
 - `POST /api/v1/experiments`
+- `GET /api/v1/observability/summary`
 - `GET /api/v1/retrievers`
 - `GET /api/v1/rerankers`
 - `GET /api/v1/health`
@@ -62,3 +64,7 @@ Open:
 ## Evaluation Focus
 
 The evaluator tracks retrieval quality, grounded generation quality, citation validity, unsupported claims, contradiction signals, hallucination score, latency, token usage, and estimated cost. JSON and Markdown reports are generated under `metrics/reports/` when evaluation persistence is enabled.
+
+## Benchmarking And Monitoring
+
+Benchmark runs compare retrievers, rerankers, embedding models, chunking settings, and prompt variants. Reports are written under `metrics/benchmarks/`, Prometheus metrics are emitted for quality and p95 latency, and the dashboard summary endpoint exposes the latest leaderboard for the frontend.
