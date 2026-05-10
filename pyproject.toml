@@ -1,0 +1,30 @@
+[project]
+name = "rag-benchmarking-and-monitoring-platform"
+version = "0.1.0"
+description = "Production-grade RAG evaluation and observability framework for enterprise LLM systems."
+requires-python = ">=3.11"
+readme = "README.md"
+
+[tool.black]
+line-length = 100
+target-version = ["py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["app", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC", "SIM"]
+ignore = ["B008"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q --cov=app --cov-report=term-missing"
+

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RAG Observability Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <div>
+          <p class="eyebrow">Enterprise LLM Reliability</p>
+          <h1>RAG Evaluation & Observability</h1>
+        </div>
+        <button id="refresh">Refresh</button>
+      </header>
+      <section class="metrics-grid">
+        <article><span>p95 latency</span><strong id="latency">--</strong></article>
+        <article><span>hallucination rate</span><strong id="hallucination">--</strong></article>
+        <article><span>retrieval quality</span><strong id="retrieval">--</strong></article>
+        <article><span>token usage</span><strong id="tokens">--</strong></article>
+      </section>
+      <section class="panel">
+        <h2>Benchmark leaderboard</h2>
+        <table>
+          <thead><tr><th>Retriever</th><th>Reranker</th><th>Quality</th><th>p95</th></tr></thead>
+          <tbody id="leaderboard"></tbody>
+        </table>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
