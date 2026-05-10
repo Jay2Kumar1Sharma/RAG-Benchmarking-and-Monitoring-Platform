@@ -3,6 +3,7 @@ import time
 from abc import ABC, abstractmethod
 
 from app.models.rag import TextChunk
+from app.observability.metrics import RERANK_LATENCY
 
 
 class Reranker(ABC):
@@ -17,7 +18,24 @@ class IdentityReranker(Reranker):
     name = "identity"
 
     async def rerank(self, query: str, chunks: list[TextChunk], top_k: int) -> list[TextChunk]:
+        RERANK_LATENCY.labels(reranker=self.name).observe(0)
         return chunks[:top_k]
+
+
+class KeywordOverlapReranker(Reranker):
+    name = "keyword_overlap"
+
+    async def rerank(self, query: str, chunks: list[TextChunk], top_k: int) -> list[TextChunk]:
+        start = time.perf_counter()
+        query_terms = set(query.lower().split())
+        scored = []
+        for chunk in chunks:
+            chunk_terms = set(chunk.text.lower().split())
+            score = len(query_terms & chunk_terms) / max(1, len(query_terms))
+            scored.append(TextChunk(chunk.id, chunk.document_id, chunk.text, dict(chunk.metadata), score))
+        latency = time.perf_counter() - start
+        RERANK_LATENCY.labels(reranker=self.name).observe(latency)
+        return sorted(scored, key=lambda item: item.score, reverse=True)[:top_k]
 
 
 class CrossEncoderReranker(Reranker):
@@ -42,7 +60,14 @@ class CrossEncoderReranker(Reranker):
         ]
         for chunk in reranked:
             chunk.metadata["reranker_latency_ms"] = (time.perf_counter() - start) * 1000
+        RERANK_LATENCY.labels(reranker=self.name).observe(time.perf_counter() - start)
         return sorted(reranked, key=lambda item: item.score, reverse=True)[:top_k]
+
+
+class BGEReranker(CrossEncoderReranker):
+    def __init__(self, model_name: str = "BAAI/bge-reranker-base") -> None:
+        super().__init__(model_name)
+        self.name = "bge"
 
 
 class CohereReranker(Reranker):
@@ -50,4 +75,3 @@ class CohereReranker(Reranker):
 
     async def rerank(self, query: str, chunks: list[TextChunk], top_k: int) -> list[TextChunk]:
         raise NotImplementedError("Cohere reranking is abstracted but requires COHERE_API_KEY.")
-

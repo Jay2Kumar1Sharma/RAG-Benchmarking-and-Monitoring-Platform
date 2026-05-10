@@ -17,3 +17,24 @@ Example payload:
 
 Benchmark results are shaped as leaderboard rows so the dashboard and experiment tracker can compare variants over time.
 
+## Retrieval And Reranking Variants
+
+Supported retrievers:
+
+- `dense`
+- `bm25`
+- `hybrid`
+- `metadata`
+- `multi_query`
+- `query_decomposition`
+- `multi_hop`
+
+Supported rerankers:
+
+- `identity`
+- `keyword_overlap`
+- `cross_encoder`
+- `bge`
+- `cohere`
+
+Query requests can tune `top_k`, `rerank_top_k`, `score_threshold`, and `dense_weight`.

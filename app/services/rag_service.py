@@ -11,16 +11,8 @@ from app.database.repositories import QueryHistoryRepository
 from app.models.rag import TextChunk
 from app.rag.context_compression import ContextCompressor
 from app.rag.generation import MockGroundedLLM
-from app.rag.retrievers import (
-    BM25Retriever,
-    DenseRetriever,
-    HybridRetriever,
-    MultiHopRetriever,
-    MultiQueryRetriever,
-    QueryDecompositionRetriever,
-    Retriever,
-)
-from app.rag.rerankers import CrossEncoderReranker, IdentityReranker, Reranker
+from app.rag.retrieval_factory import RetrievalFactory
+from app.rag.retrievers import RetrievalConfig
 from app.schemas.common import SourceChunk
 from app.schemas.query import QueryRequest, QueryResponse, TokenUsage
 from app.services.ingestion_service import embedding_provider, ingested_corpus, vector_store
@@ -35,12 +27,30 @@ class RagService:
         self.repository = QueryHistoryRepository(session)
         self.compressor = ContextCompressor()
         self.llm = MockGroundedLLM()
+        self.retrieval_factory = RetrievalFactory(
+            settings,
+            embedding_provider,
+            vector_store,
+            ingested_corpus,
+        )
 
     async def answer(self, request: QueryRequest) -> QueryResponse:
         start = time.perf_counter()
-        retriever = self._build_retriever(request.retriever)
-        reranker = self._build_reranker(request.reranker)
-        retrieval = await retriever.retrieve(request.question, request.namespace, request.top_k, request.filters)
+        retriever = self.retrieval_factory.build_retriever(
+            request.retriever,
+            RetrievalConfig(
+                top_k=request.top_k,
+                score_threshold=request.score_threshold,
+                dense_weight=request.dense_weight,
+            ),
+        )
+        reranker = self.retrieval_factory.build_reranker(request.reranker)
+        retrieval = await retriever.retrieve(
+            request.question,
+            request.namespace,
+            request.top_k,
+            request.filters,
+        )
         reranked = await reranker.rerank(request.question, retrieval.chunks, request.rerank_top_k)
         compressed = await self.compressor.compress(request.question, reranked)
         generation = await self.llm.generate(request.question, compressed)
@@ -63,26 +73,6 @@ class RagService:
         response = await self.answer(request)
         for token in response.answer.split():
             yield f"data: {token}\n\n"
-
-    def _build_retriever(self, name: str) -> Retriever:
-        dense = DenseRetriever(embedding_provider, vector_store)
-        sparse = BM25Retriever(ingested_corpus)
-        hybrid = HybridRetriever(dense, sparse)
-        registry: dict[str, Retriever] = {
-            "dense": dense,
-            "bm25": sparse,
-            "hybrid": hybrid,
-            "metadata": dense,
-            "multi_query": MultiQueryRetriever(hybrid),
-            "query_decomposition": QueryDecompositionRetriever(hybrid),
-            "multi_hop": MultiHopRetriever(hybrid),
-        }
-        return registry.get(name, hybrid)
-
-    def _build_reranker(self, name: str) -> Reranker:
-        if name in {"cross_encoder", "bge"}:
-            return CrossEncoderReranker(settings.default_reranker_model)
-        return IdentityReranker()
 
     async def _persist_history(self, question: str, response: QueryResponse) -> None:
         try:

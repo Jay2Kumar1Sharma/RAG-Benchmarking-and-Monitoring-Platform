@@ -14,5 +14,6 @@ async def retrievers() -> ComponentListResponse:
 
 @router.get("/rerankers", response_model=ComponentListResponse)
 async def rerankers() -> ComponentListResponse:
-    return ComponentListResponse(components=["cross_encoder", "bge", "cohere", "identity"])
-
+    return ComponentListResponse(
+        components=["cross_encoder", "bge", "cohere", "identity", "keyword_overlap"]
+    )

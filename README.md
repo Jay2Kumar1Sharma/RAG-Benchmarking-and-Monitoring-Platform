@@ -10,7 +10,7 @@ This project is an enterprise-style local LLMOps platform for measuring and impr
 - Embedding provider abstraction with deterministic local fallback and sentence-transformer support.
 - Vector store abstraction with in-memory local mode and Qdrant integration.
 - Dense, BM25, hybrid, metadata-aware, multi-query, query decomposition, and multi-hop retrieval patterns.
-- Identity, cross-encoder, BGE-style, and Cohere reranker abstractions.
+- Identity, keyword-overlap, cross-encoder, BGE-style, and Cohere reranker abstractions.
 - Grounded generation provider interface with citation-aware local fallback.
 - Evaluation metrics for retrieval, generation, hallucination, and semantic similarity.
 - Benchmark runner and lightweight dashboard starter.
