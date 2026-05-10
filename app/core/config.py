@@ -23,6 +23,7 @@ class Settings(BaseSettings):
             "http://127.0.0.1:8000",
         ]
     )
+    cors_origin_regex: str | None = r"https://.*\.azurestaticapps\.net"
 
     database_url: str = "postgresql+asyncpg://rag_user:rag_password@localhost:5432/rag_observability"
     redis_url: str = "redis://localhost:6379/0"

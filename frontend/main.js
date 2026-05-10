@@ -22,19 +22,36 @@ const state = {
 };
 
 const $ = (selector) => document.querySelector(selector);
+const config = window.RAG_PLATFORM_CONFIG || {};
+const defaultApiBaseUrl = config.apiBaseUrl || "http://localhost:8000";
 
 function apiBase() {
   return $("#api-base").value.replace(/\/$/, "");
 }
 
 async function request(path, options = {}) {
-  const response = await fetch(`${apiBase()}${path}`, options);
-  const text = await response.text();
-  const payload = text ? JSON.parse(text) : {};
-  if (!response.ok) {
-    throw new Error(payload.detail || `HTTP ${response.status}`);
+  const timeoutMs = options.timeoutMs || 15000;
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(`${apiBase()}${path}`, {
+      ...options,
+      signal: controller.signal,
+    });
+    const text = await response.text();
+    const payload = text ? JSON.parse(text) : {};
+    if (!response.ok) {
+      throw new Error(payload.detail || `HTTP ${response.status}`);
+    }
+    return payload;
+  } catch (error) {
+    if (error.name === "AbortError") {
+      throw new Error("Request timed out");
+    }
+    throw error;
+  } finally {
+    window.clearTimeout(timeout);
   }
-  return payload;
 }
 
 function setStatus(selector, text, tone = "neutral") {
@@ -44,10 +61,11 @@ function setStatus(selector, text, tone = "neutral") {
 }
 
 async function loadSummary() {
+  setStatus("#api-status", "checking", "neutral");
   try {
     const [health, summary] = await Promise.all([
-      request("/api/v1/health"),
-      request("/api/v1/observability/summary"),
+      request("/api/v1/health", { timeoutMs: 8000 }),
+      request("/api/v1/observability/summary", { timeoutMs: 12000 }),
     ]);
     setStatus("#api-status", health.status, "good");
     return summary;
@@ -239,4 +257,5 @@ $("#upload-form").addEventListener("submit", uploadDocuments);
 $("#query-form").addEventListener("submit", runQuery);
 $("#evaluate-form").addEventListener("submit", evaluateAnswer);
 $("#benchmark-form").addEventListener("submit", runBenchmark);
+$("#api-base").value = defaultApiBaseUrl;
 renderSummary();
