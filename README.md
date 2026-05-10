@@ -52,6 +52,15 @@ Open:
 - `GET /api/v1/health`
 - `GET /metrics`
 
+## Local Validation
+
+```powershell
+venv\Scripts\python scripts\validate_project.py
+venv\Scripts\python -m pytest
+```
+
+Use the validation script when the full dependency set is still installing. It checks syntax, line length, README wording constraints, and Graphify outputs without importing heavyweight AI packages.
+
 ## Build Plan
 
 1. Project scaffolding, FastAPI setup, virtual environment, and database setup.
@@ -68,3 +77,5 @@ The evaluator tracks retrieval quality, grounded generation quality, citation va
 ## Benchmarking And Monitoring
 
 Benchmark runs compare retrievers, rerankers, embedding models, chunking settings, and prompt variants. Reports are written under `metrics/benchmarks/`, Prometheus metrics are emitted for quality and p95 latency, and the dashboard summary endpoint exposes the latest leaderboard for the frontend.
+
+Sample benchmark data is available at `data/benchmark_sample.json`.

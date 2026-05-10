@@ -1,0 +1,12 @@
+[
+  {
+    "question": "What should generated answers cite?",
+    "ground_truth": "Generated answers should cite retrieved evidence.",
+    "relevant_chunk_ids": ["policy-1"]
+  },
+  {
+    "question": "When do high-risk answers require evaluation?",
+    "ground_truth": "High-risk answers require evaluation before release.",
+    "relevant_chunk_ids": ["policy-2"]
+  }
+]

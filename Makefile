@@ -1,7 +1,7 @@
 PYTHON := venv/Scripts/python
 PIP := venv/Scripts/pip
 
-.PHONY: install dev test lint format migrate revision precommit
+.PHONY: install dev test lint format migrate revision precommit validate
 
 install:
 	$(PIP) install --upgrade pip
@@ -33,3 +33,5 @@ revision:
 precommit:
 	$(PYTHON) -m pre_commit run --all-files
 
+validate:
+	$(PYTHON) scripts/validate_project.py

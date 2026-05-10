@@ -1,12 +1,12 @@
 # Graph Report - RAG_Benchmarking_and_Monitoring_Platform  (2026-05-10)
 
 ## Corpus Check
-- 89 files · ~10,473 words
+- 93 files · ~11,021 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 455 nodes · 881 edges · 34 communities detected
-- Extraction: 60% EXTRACTED · 40% INFERRED · 0% AMBIGUOUS · INFERRED: 355 edges (avg confidence: 0.63)
+- 468 nodes · 903 edges · 34 communities detected
+- Extraction: 60% EXTRACTED · 40% INFERRED · 0% AMBIGUOUS · INFERRED: 362 edges (avg confidence: 0.64)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
@@ -46,10 +46,10 @@
 - [[_COMMUNITY_Community 46|Community 46]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `TextChunk` - 59 edges
+1. `TextChunk` - 60 edges
 2. `RagService` - 27 edges
 3. `RetrievalFactory` - 26 edges
-4. `QueryTransformer` - 19 edges
+4. `QueryTransformer` - 20 edges
 5. `RetrievalResult` - 18 edges
 6. `EmbeddingProvider` - 18 edges
 7. `Retriever` - 16 edges
@@ -66,70 +66,70 @@
   app\api\dependencies.py → app\services\evaluation_service.py
 - `get_benchmark_service()` --calls--> `BenchmarkService`  [INFERRED]
   app\api\dependencies.py → app\services\benchmark_service.py
-- `TextChunk` --uses--> `FAISS-backed store when faiss-cpu is installed, with in-memory behavior as fallb`  [INFERRED]
-  app\models\rag.py → app\rag\vectorstores.py
+- `TextChunk` --uses--> `Sentence-window semantic chunking without requiring a model at import time.`  [INFERRED]
+  app\models\rag.py → app\rag\chunking.py
 
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 0.09
-Nodes (27): ABC, RetrievalResult, CachedEmbeddingProvider, EmbeddingProvider, OpenAIEmbeddingProvider, QueryTransformer, RetrievalFactory, _average_length() (+19 more)
+Cohesion: 0.08
+Nodes (35): RetrievalResult, TextChunk, ContextCompressor, EmbeddingProvider, QueryTransformer, BGEReranker, CohereReranker, CrossEncoderReranker (+27 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.08
-Nodes (30): EvaluationEngine, _performance_from_example(), to_text_chunks(), answer_relevance(), faithfulness(), groundedness(), semantic_similarity(), _sentences() (+22 more)
+Nodes (31): EvaluationEngine, _performance_from_example(), to_text_chunks(), answer_relevance(), faithfulness(), groundedness(), semantic_similarity(), _sentences() (+23 more)
 
 ### Community 2 - "Community 2"
+Cohesion: 0.06
+Nodes (13): CachedEmbeddingProvider, HashEmbeddingProvider, OpenAIEmbeddingProvider, Deterministic local fallback used for tests and offline development., SentenceTransformerEmbeddingProvider, build_embedding_provider(), build_vector_store(), _cosine() (+5 more)
+
+### Community 3 - "Community 3"
 Cohesion: 0.14
 Nodes (17): Base, Base, BenchmarkRun, Chunk, Document, EvaluationResult, Experiment, LatencyMetric (+9 more)
 
-### Community 3 - "Community 3"
-Cohesion: 0.1
-Nodes (19): BaseModel, ContextCompressor, health(), dashboard_summary(), rerankers(), retrievers(), HealthResponse, SourceChunk (+11 more)
-
 ### Community 4 - "Community 4"
-Cohesion: 0.12
-Nodes (15): TextChunk, build_chunker(), Chunker, ChunkingConfig, Sentence-window semantic chunking without requiring a model at import time., RecursiveChunker, SemanticChunker, BGEReranker (+7 more)
+Cohesion: 0.11
+Nodes (17): BaseModel, health(), dashboard_summary(), rerankers(), retrievers(), HealthResponse, SourceChunk, EvaluationExample (+9 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.11
-Nodes (15): BenchmarkReportWriter, BenchmarkRunner, _latency_score(), _score_variant(), _variant_score(), ExperimentTracker, LangSmithTracker, MLflowTracker (+7 more)
+Nodes (15): build_chunker(), Chunker, ChunkingConfig, Sentence-window semantic chunking without requiring a model at import time., RecursiveChunker, SemanticChunker, chunk_fingerprint(), content_hash() (+7 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.11
-Nodes (8): SentenceTransformerEmbeddingProvider, build_embedding_provider(), build_vector_store(), _cosine(), FaissVectorStore, InMemoryVectorStore, QdrantVectorStore, FAISS-backed store when faiss-cpu is installed, with in-memory behavior as fallb
+Cohesion: 0.12
+Nodes (11): ABC, ExperimentTracker, LangSmithTracker, MLflowTracker, DocumentLoader, DocxLoader, LoaderRegistry, OcrReadyLoader (+3 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.15
-Nodes (11): HashEmbeddingProvider, Deterministic local fallback used for tests and offline development., chunk_fingerprint(), content_hash(), metadata_for_upload(), read_upload_bytes(), DocumentIngestionItem, DocumentIngestionResponse (+3 more)
+Cohesion: 0.14
+Nodes (12): BenchmarkReportWriter, BenchmarkRunner, _latency_score(), _score_variant(), _variant_score(), NoopExperimentTracker, BenchmarkRequest, BenchmarkResponse (+4 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.18
 Nodes (12): BenchmarkCase, _case_from_mapping(), load_benchmark_cases(), _load_csv(), _load_json(), _load_jsonl(), _average(), DashboardSnapshot (+4 more)
 
 ### Community 9 - "Community 9"
-Cohesion: 0.18
-Nodes (7): DocumentLoader, DocxLoader, LoaderRegistry, OcrReadyLoader, PdfLoader, PlainTextLoader, Placeholder seam for Tesseract, Azure OCR, or layout-aware enterprise OCR.
-
-### Community 10 - "Community 10"
 Cohesion: 0.16
 Nodes (9): get_benchmark_service(), get_evaluation_service(), get_experiment_service(), get_ingestion_service(), get_rag_service(), ExperimentCreate, ExperimentResponse, ExperimentService (+1 more)
 
+### Community 10 - "Community 10"
+Cohesion: 0.13
+Nodes (8): create_app(), lifespan(), AppError, install_exception_handlers(), configure_logging(), Exception, test_health_endpoint(), test_registry_and_observability_endpoints()
+
 ### Community 11 - "Community 11"
-Cohesion: 0.23
+Cohesion: 0.25
 Nodes (6): GenerationResult, GeminiLLM, GroqLLM, LLMProvider, MockGroundedLLM, OpenAILLM
 
 ### Community 12 - "Community 12"
-Cohesion: 0.15
-Nodes (7): create_app(), lifespan(), AppError, install_exception_handlers(), configure_logging(), Exception, test_health_endpoint()
-
-### Community 13 - "Community 13"
 Cohesion: 0.25
 Nodes (2): JsonCache, RedisJsonCache
 
-### Community 14 - "Community 14"
+### Community 13 - "Community 13"
 Cohesion: 0.29
 Nodes (4): run_migrations_offline(), BaseSettings, get_settings(), Settings
+
+### Community 14 - "Community 14"
+Cohesion: 0.57
+Nodes (6): _check_graphify_outputs(), _check_line_lengths(), _check_python_syntax(), _check_readme_words(), main(), _python_files()
 
 ### Community 15 - "Community 15"
 Cohesion: 0.33
@@ -210,7 +210,7 @@ Nodes (1): Deterministic local fallback used for tests and offline development.
 ## Knowledge Gaps
 - **18 isolated node(s):** `initial schema  Revision ID: 0001_initial_schema Revises: Create Date: 2026-05-1`, `Enterprise RAG evaluation and observability platform.`, `Agentic retrieval orchestration.`, `Benchmark execution and experiment comparison.`, `Configuration package reserved for environment-specific settings.` (+13 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `Community 13`** (11 nodes): `cache.py`, `JsonCache`, `.get()`, `.__init__()`, `.invalidate()`, `.set()`, `RedisJsonCache`, `.get()`, `.__init__()`, `.invalidate()`, `._redis()`
+- **Thin community `Community 12`** (11 nodes): `cache.py`, `JsonCache`, `.get()`, `.__init__()`, `.invalidate()`, `.set()`, `RedisJsonCache`, `.get()`, `.__init__()`, `.invalidate()`, `._redis()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 15`** (6 nodes): `RetrievalAgent`, `.__init__()`, `.plan()`, `retrieval_agent.py`, `workflows.py`, `build_langgraph_workflow()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
@@ -252,17 +252,17 @@ Nodes (1): Deterministic local fallback used for tests and offline development.
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `TextChunk` connect `Community 4` to `Community 0`, `Community 1`, `Community 3`, `Community 6`, `Community 7`, `Community 11`?**
-  _High betweenness centrality (0.244) - this node is a cross-community bridge._
-- **Why does `RagService` connect `Community 3` to `Community 0`, `Community 2`, `Community 4`, `Community 10`, `Community 11`?**
-  _High betweenness centrality (0.129) - this node is a cross-community bridge._
-- **Why does `EvaluationEngine` connect `Community 1` to `Community 2`, `Community 3`, `Community 4`?**
-  _High betweenness centrality (0.086) - this node is a cross-community bridge._
-- **Are the 58 inferred relationships involving `TextChunk` (e.g. with `EvaluationEngine` and `HallucinationReport`) actually correct?**
-  _`TextChunk` has 58 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `TextChunk` connect `Community 0` to `Community 1`, `Community 2`, `Community 11`, `Community 5`?**
+  _High betweenness centrality (0.242) - this node is a cross-community bridge._
+- **Why does `RagService` connect `Community 0` to `Community 11`, `Community 9`, `Community 3`, `Community 4`?**
+  _High betweenness centrality (0.125) - this node is a cross-community bridge._
+- **Why does `EvaluationEngine` connect `Community 1` to `Community 0`, `Community 3`, `Community 4`?**
+  _High betweenness centrality (0.079) - this node is a cross-community bridge._
+- **Are the 59 inferred relationships involving `TextChunk` (e.g. with `EvaluationEngine` and `HallucinationReport`) actually correct?**
+  _`TextChunk` has 59 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 22 inferred relationships involving `RagService` (e.g. with `QueryHistory` and `QueryHistoryRepository`) actually correct?**
   _`RagService` has 22 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 22 inferred relationships involving `RetrievalFactory` (e.g. with `Settings` and `TextChunk`) actually correct?**
   _`RetrievalFactory` has 22 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 15 inferred relationships involving `QueryTransformer` (e.g. with `RetrievalFactory` and `RetrievalConfig`) actually correct?**
-  _`QueryTransformer` has 15 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 16 inferred relationships involving `QueryTransformer` (e.g. with `RetrievalFactory` and `RetrievalConfig`) actually correct?**
+  _`QueryTransformer` has 16 INFERRED edges - model-reasoned connections that need verification._
