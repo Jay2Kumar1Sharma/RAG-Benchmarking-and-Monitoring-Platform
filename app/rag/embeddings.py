@@ -15,6 +15,12 @@ class EmbeddingProvider(ABC):
     async def embed_query(self, text: str) -> list[float]:
         return (await self.embed_texts([text]))[0]
 
+    async def embed_batches(self, texts: list[str], batch_size: int = 32) -> list[list[float]]:
+        vectors: list[list[float]] = []
+        for index in range(0, len(texts), batch_size):
+            vectors.extend(await self.embed_texts(texts[index : index + batch_size]))
+        return vectors
+
 
 class HashEmbeddingProvider(EmbeddingProvider):
     """Deterministic local fallback used for tests and offline development."""
@@ -62,7 +68,14 @@ class CachedEmbeddingProvider(EmbeddingProvider):
     async def embed_texts(self, texts: list[str]) -> list[list[float]]:
         missing = [text for text in texts if text not in self._cache]
         if missing:
-            vectors = await self.provider.embed_texts(missing)
+            vectors = await self.provider.embed_batches(missing)
             self._cache.update(dict(zip(missing, vectors, strict=True)))
         return [self._cache[text] for text in texts]
 
+
+class OpenAIEmbeddingProvider(EmbeddingProvider):
+    def __init__(self, model_name: str = "text-embedding-3-small") -> None:
+        self.model_name = model_name
+
+    async def embed_texts(self, texts: list[str]) -> list[list[float]]:
+        raise NotImplementedError("OpenAI embeddings require OPENAI_API_KEY and client wiring.")

@@ -27,6 +27,8 @@ class InMemoryVectorStore(VectorStore):
         self._data: dict[str, list[tuple[TextChunk, list[float]]]] = {}
 
     async def upsert(self, namespace: str, chunks: list[TextChunk], vectors: list[list[float]]) -> None:
+        if not chunks:
+            return
         self._data.setdefault(namespace, [])
         self._data[namespace].extend(zip(chunks, vectors, strict=True))
 
@@ -63,6 +65,8 @@ class FaissVectorStore(InMemoryVectorStore):
         self._chunks: dict[str, list[TextChunk]] = {}
 
     async def upsert(self, namespace: str, chunks: list[TextChunk], vectors: list[list[float]]) -> None:
+        if not chunks:
+            return
         try:
             import faiss
         except Exception:
@@ -104,16 +108,21 @@ class QdrantVectorStore(VectorStore):
         self.collection = collection
 
     async def upsert(self, namespace: str, chunks: list[TextChunk], vectors: list[list[float]]) -> None:
+        if not chunks:
+            return
         from qdrant_client import AsyncQdrantClient
         from qdrant_client.models import Distance, PointStruct, VectorParams
 
         client = AsyncQdrantClient(url=self.url)
-        await client.recreate_collection(
-            collection_name=f"{self.collection}_{namespace}",
-            vectors_config=VectorParams(size=len(vectors[0]), distance=Distance.COSINE),
-        )
+        collection_name = f"{self.collection}_{namespace}"
+        exists = await client.collection_exists(collection_name)
+        if not exists:
+            await client.create_collection(
+                collection_name=collection_name,
+                vectors_config=VectorParams(size=len(vectors[0]), distance=Distance.COSINE),
+            )
         await client.upsert(
-            collection_name=f"{self.collection}_{namespace}",
+            collection_name=collection_name,
             points=[
                 PointStruct(
                     id=chunk.id,
@@ -132,11 +141,21 @@ class QdrantVectorStore(VectorStore):
         filters: dict[str, object] | None = None,
     ) -> list[TextChunk]:
         from qdrant_client import AsyncQdrantClient
+        from qdrant_client.models import FieldCondition, Filter, MatchValue
 
         client = AsyncQdrantClient(url=self.url)
+        qdrant_filter = None
+        if filters:
+            qdrant_filter = Filter(
+                must=[
+                    FieldCondition(key=key, match=MatchValue(value=value))
+                    for key, value in filters.items()
+                ]
+            )
         hits = await client.search(
             collection_name=f"{self.collection}_{namespace}",
             query_vector=query_vector,
+            query_filter=qdrant_filter,
             limit=top_k,
         )
         return [

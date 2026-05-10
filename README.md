@@ -15,6 +15,7 @@ This project is an enterprise-style local LLMOps platform for measuring and impr
 - Evaluation metrics for retrieval, generation, hallucination, and semantic similarity.
 - Benchmark runner and lightweight dashboard starter.
 - PostgreSQL schema via SQLAlchemy and Alembic.
+- Graphify code graph artifacts in `graphify-out/`.
 
 ## Local Quickstart
 
@@ -33,6 +34,7 @@ Open:
 - Health: `http://localhost:8000/api/v1/health`
 - Metrics: `http://localhost:8000/metrics`
 - Dashboard prototype: `frontend/index.html`
+- Code graph: `graphify-out/graph.html`
 
 ## API Surface
 
@@ -56,4 +58,3 @@ Open:
 4. Evaluation engine, hallucination detection, and metrics framework.
 5. Benchmarking, dashboard, monitoring, and experiment tracking.
 6. Testing, documentation, and final cleanup.
-

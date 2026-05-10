@@ -9,6 +9,12 @@ copy .env.example .env
 uvicorn app.main:app --reload
 ```
 
+Generate the code graph:
+
+```powershell
+graphify update .
+```
+
 Optional local services:
 
 - PostgreSQL for persistence.
@@ -16,4 +22,3 @@ Optional local services:
 - Qdrant for local vector database experiments.
 
 The default local path uses an in-memory vector store and deterministic hash embeddings so the API can boot without external services.
-

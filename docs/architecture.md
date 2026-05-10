@@ -23,3 +23,17 @@ Core boundaries:
 - `app/evaluation`: retrieval, generation, hallucination, and performance metrics.
 - `app/database`: SQLAlchemy models, repositories, and Alembic migrations.
 
+## Code Graph
+
+Graphify artifacts are generated in `graphify-out/`:
+
+- `graphify-out/graph.html`: interactive code graph.
+- `graphify-out/graph.json`: graph data for path, query, and explain commands.
+- `graphify-out/GRAPH_REPORT.md`: generated report with hubs and communities.
+
+Refresh the graph after meaningful code changes:
+
+```powershell
+graphify update .
+```
+

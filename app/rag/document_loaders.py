@@ -17,6 +17,7 @@ class PlainTextLoader(DocumentLoader):
 
     async def load(self, file: UploadFile) -> str:
         data = await file.read()
+        await file.seek(0)
         return data.decode("utf-8", errors="replace")
 
 
@@ -59,4 +60,3 @@ class LoaderRegistry:
             if suffix in loader.supported_suffixes:
                 return loader
         raise ValueError(f"Unsupported document type: {suffix or filename}")
-

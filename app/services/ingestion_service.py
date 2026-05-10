@@ -1,5 +1,3 @@
-import hashlib
-
 from fastapi import UploadFile
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -10,16 +8,14 @@ from app.database.models import Chunk, Document
 from app.database.repositories import DocumentRepository
 from app.rag.chunking import ChunkingConfig, build_chunker
 from app.rag.document_loaders import LoaderRegistry
-from app.rag.embeddings import CachedEmbeddingProvider, HashEmbeddingProvider
-from app.rag.vectorstores import InMemoryVectorStore
+from app.rag.factories import build_embedding_provider, build_vector_store
+from app.rag.metadata import chunk_fingerprint, metadata_for_upload, read_upload_bytes
 from app.schemas.documents import DocumentIngestionItem, DocumentIngestionResponse
 
 logger = get_logger(__name__)
 settings = get_settings()
-embedding_provider = CachedEmbeddingProvider(
-    HashEmbeddingProvider(model_name=settings.default_embedding_model)
-)
-vector_store = InMemoryVectorStore()
+embedding_provider = build_embedding_provider(settings, offline_safe=True)
+vector_store = build_vector_store(settings)
 ingested_corpus = []
 
 
@@ -45,9 +41,11 @@ class IngestionService:
 
     async def _ingest_one(self, file: UploadFile) -> DocumentIngestionItem:
         loader = self.loaders.for_filename(file.filename or "document.txt")
+        data = await read_upload_bytes(file)
         text = await loader.load(file)
-        content_hash = hashlib.sha256(text.encode("utf-8")).hexdigest()
-        existing = await self._get_existing(content_hash)
+        metadata = metadata_for_upload(file, data, text)
+        document_hash = str(metadata["content_hash"])
+        existing = await self._get_existing(document_hash)
         if existing:
             return DocumentIngestionItem(
                 filename=file.filename or "document",
@@ -58,19 +56,32 @@ class IngestionService:
 
         document = Document(
             filename=file.filename or "document",
-            content_hash=content_hash,
+            content_hash=document_hash,
             mime_type=file.content_type,
-            metadata_={},
+            metadata_=metadata,
         )
         try:
             await self.repository.add(document)
         except SQLAlchemyError as exc:
             logger.warning("document_db_add_skipped", error=str(exc))
         chunker = build_chunker(
-            ChunkingConfig(chunk_size=settings.default_chunk_size, chunk_overlap=settings.default_chunk_overlap)
+            ChunkingConfig(
+                chunk_size=settings.default_chunk_size,
+                chunk_overlap=settings.default_chunk_overlap,
+            )
         )
-        chunks = chunker.split(text, document.id, {"filename": document.filename, "content_hash": content_hash})
-        vectors = await embedding_provider.embed_texts([chunk.text for chunk in chunks])
+        chunks = chunker.split(
+            text,
+            document.id,
+            {"filename": document.filename, "content_hash": document_hash},
+        )
+        for chunk in chunks:
+            chunk.metadata["fingerprint"] = chunk_fingerprint(
+                document_hash,
+                chunk.text,
+                int(chunk.metadata["chunk_index"]),
+            )
+        vectors = await embedding_provider.embed_batches([chunk.text for chunk in chunks])
         await vector_store.upsert("default", chunks, vectors)
         ingested_corpus.extend(chunks)
         for chunk in chunks:
@@ -89,7 +100,7 @@ class IngestionService:
             filename=document.filename,
             document_id=document.id,
             chunks_created=len(chunks),
-            metadata={"hash": content_hash},
+            metadata=metadata,
         )
 
     async def _get_existing(self, content_hash: str) -> Document | None:
