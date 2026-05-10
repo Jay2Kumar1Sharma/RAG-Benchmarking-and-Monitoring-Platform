@@ -50,7 +50,7 @@ Open:
 - `GET /api/v1/health`
 - `GET /metrics`
 
-## Milestone Roadmap
+## Build Plan
 
 1. Project scaffolding, FastAPI setup, virtual environment, and database setup.
 2. Document ingestion, embedding pipeline, and vector database integration.
@@ -58,3 +58,7 @@ Open:
 4. Evaluation engine, hallucination detection, and metrics framework.
 5. Benchmarking, dashboard, monitoring, and experiment tracking.
 6. Testing, documentation, and final cleanup.
+
+## Evaluation Focus
+
+The evaluator tracks retrieval quality, grounded generation quality, citation validity, unsupported claims, contradiction signals, hallucination score, latency, token usage, and estimated cost. JSON and Markdown reports are generated under `metrics/reports/` when evaluation persistence is enabled.

@@ -24,11 +24,18 @@ class EvaluationService:
                 "ground_truth": example.ground_truth,
                 "contexts": to_text_chunks(example.contexts),
                 "relevant_chunk_ids": example.relevant_chunk_ids,
+                "retrieval_latency_ms": example.retrieval_latency_ms,
+                "generation_latency_ms": example.generation_latency_ms,
+                "total_latency_ms": example.total_latency_ms,
+                "prompt_tokens": example.prompt_tokens,
+                "completion_tokens": example.completion_tokens,
+                "estimated_cost_usd": example.estimated_cost_usd,
             }
             for example in request.examples
         ]
         response = await self.engine.evaluate_examples(examples, request.persist)
-        await self._persist(request, response)
+        if request.persist:
+            await self._persist(request, response)
         return response
 
     async def _persist(self, request: EvaluationRequest, response: EvaluationResponse) -> None:
@@ -46,4 +53,3 @@ class EvaluationService:
         except SQLAlchemyError as exc:
             await self.session.rollback()
             logger.warning("evaluation_persistence_skipped", error=str(exc))
-

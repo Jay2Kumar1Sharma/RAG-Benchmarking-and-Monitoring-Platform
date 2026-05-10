@@ -17,6 +17,10 @@ Generation metrics:
 - Groundedness
 - Hallucination score
 - Semantic similarity
+- Citation coverage
+- Citation precision
+- Unsupported claim rate
+- Contradiction score
 
 Operational metrics:
 
@@ -27,3 +31,4 @@ Operational metrics:
 - Cost estimates
 - Throughput
 
+Evaluation reports are written to `metrics/reports/` when persistence is enabled. Each report includes aggregate quality scores, per-example unsupported-claim heatmaps, and performance summaries.
