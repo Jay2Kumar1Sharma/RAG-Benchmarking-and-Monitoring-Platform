@@ -13,7 +13,16 @@ class Settings(BaseSettings):
     debug: bool = True
     api_v1_prefix: str = "/api/v1"
     log_level: str = "INFO"
-    cors_origins: list[str] = Field(default_factory=lambda: ["http://localhost:3000", "http://localhost:8000"])
+    cors_origins: list[str] = Field(
+        default_factory=lambda: [
+            "http://localhost:3000",
+            "http://localhost:5500",
+            "http://127.0.0.1:5500",
+            "http://[::1]:5500",
+            "http://localhost:8000",
+            "http://127.0.0.1:8000",
+        ]
+    )
 
     database_url: str = "postgresql+asyncpg://rag_user:rag_password@localhost:5432/rag_observability"
     redis_url: str = "redis://localhost:6379/0"

@@ -1,7 +1,7 @@
-# Graph Report - RAG_Benchmarking_and_Monitoring_Platform  (2026-05-10)
+# Graph Report - RAG_Benchmarking_and_Monitoring_Platform  (2026-05-11)
 
 ## Corpus Check
-- 94 files · ~12,136 words
+- 94 files · ~12,144 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
