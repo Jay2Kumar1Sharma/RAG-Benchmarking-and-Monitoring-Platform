@@ -74,6 +74,18 @@ Use the validation script when the full dependency set is still installing. It c
 
 The evaluator tracks retrieval quality, grounded generation quality, citation validity, unsupported claims, contradiction signals, hallucination score, latency, token usage, and estimated cost. JSON and Markdown reports are generated under `metrics/reports/` when evaluation persistence is enabled.
 
+## Gemini Local Provider
+
+To use Gemini locally, set these values in `.env`:
+
+```env
+DEFAULT_LLM_PROVIDER=gemini
+GEMINI_MODEL=gemini-2.5-flash-lite
+GEMINI_API_KEY=your-local-key
+```
+
+Keep real API keys in `.env`; do not put secrets in `.env.example`.
+
 ## Benchmarking And Monitoring
 
 Benchmark runs compare retrievers, rerankers, embedding models, chunking settings, and prompt variants. Reports are written under `metrics/benchmarks/`, Prometheus metrics are emitted for quality and p95 latency, and the dashboard summary endpoint exposes the latest leaderboard for the frontend.

@@ -10,7 +10,7 @@ from app.database.models import QueryHistory
 from app.database.repositories import QueryHistoryRepository
 from app.models.rag import TextChunk
 from app.rag.context_compression import ContextCompressor
-from app.rag.generation import MockGroundedLLM
+from app.rag.llm_factory import build_llm_provider
 from app.rag.retrieval_factory import RetrievalFactory
 from app.rag.retrievers import RetrievalConfig
 from app.schemas.common import SourceChunk
@@ -26,7 +26,7 @@ class RagService:
         self.session = session
         self.repository = QueryHistoryRepository(session)
         self.compressor = ContextCompressor()
-        self.llm = MockGroundedLLM()
+        self.llm = build_llm_provider(settings)
         self.retrieval_factory = RetrievalFactory(
             settings,
             embedding_provider,

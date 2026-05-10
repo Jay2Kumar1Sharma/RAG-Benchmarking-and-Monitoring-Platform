@@ -25,6 +25,7 @@ class Settings(BaseSettings):
     default_embedding_model: str = "BAAI/bge-small-en-v1.5"
     default_reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
     default_llm_provider: Literal["mock", "openai", "groq", "gemini"] = "mock"
+    gemini_model: str = "gemini-2.5-flash-lite"
 
     openai_api_key: str | None = None
     groq_api_key: str | None = None
@@ -42,4 +43,3 @@ class Settings(BaseSettings):
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
-
