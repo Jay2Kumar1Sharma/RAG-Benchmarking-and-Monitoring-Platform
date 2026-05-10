@@ -22,3 +22,6 @@ node_modules/
 graphify-out/cache/
 metrics/reports/
 metrics/benchmarks/
+Dockerfile
+.dockerignore
+docs/azure_deployment.md
