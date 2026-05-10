@@ -34,7 +34,7 @@ Open:
 - API docs: `http://localhost:8000/docs`
 - Health: `http://localhost:8000/api/v1/health`
 - Metrics: `http://localhost:8000/metrics`
-- Dashboard prototype: `frontend/index.html`
+- Interactive frontend: `frontend/index.html`
 - Code graph: `graphify-out/graph.html`
 
 ## API Surface
@@ -91,3 +91,7 @@ Keep real API keys in `.env`; do not put secrets in `.env.example`.
 Benchmark runs compare retrievers, rerankers, embedding models, chunking settings, and prompt variants. Reports are written under `metrics/benchmarks/`, Prometheus metrics are emitted for quality and p95 latency, and the dashboard summary endpoint exposes the latest leaderboard for the frontend.
 
 Sample benchmark data is available at `data/benchmark_sample.json`.
+
+## Frontend Console
+
+Open `frontend/index.html` after starting the FastAPI server. The console can upload documents, run RAG queries, inspect retrieved sources, evaluate the latest answer, run benchmark comparisons, and refresh observability metrics. Set the API field to `http://localhost:8000` for local use.

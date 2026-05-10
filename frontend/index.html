@@ -3,38 +3,127 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RAG Observability Dashboard</title>
+    <title>RAG Evaluation Console</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="shell">
-      <header>
+      <header class="topbar">
         <div>
           <p class="eyebrow">Enterprise LLM Reliability</p>
-          <h1>RAG Evaluation & Observability</h1>
+          <h1>RAG Evaluation Console</h1>
         </div>
-        <button id="refresh">Refresh</button>
+        <div class="api-control">
+          <label for="api-base">API</label>
+          <input id="api-base" value="http://localhost:8000" />
+          <button id="refresh" type="button">Refresh</button>
+        </div>
       </header>
+
       <section class="metrics-grid">
+        <article><span>API status</span><strong id="api-status">--</strong></article>
         <article><span>p95 latency</span><strong id="latency">--</strong></article>
         <article><span>hallucination rate</span><strong id="hallucination">--</strong></article>
         <article><span>retrieval quality</span><strong id="retrieval">--</strong></article>
         <article><span>token usage</span><strong id="tokens">--</strong></article>
       </section>
-      <section class="panel">
-        <h2>Benchmark leaderboard</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Retriever</th>
-              <th>Reranker</th>
-              <th>Quality</th>
-              <th>Hallucination</th>
-              <th>p95</th>
-            </tr>
-          </thead>
-          <tbody id="leaderboard"></tbody>
-        </table>
+
+      <section class="workspace">
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Documents</h2>
+            <span id="upload-status" class="status-text">No upload yet</span>
+          </div>
+          <form id="upload-form">
+            <input id="document-files" type="file" multiple accept=".txt,.md,.markdown,.pdf,.docx" />
+            <button type="submit">Upload</button>
+          </form>
+          <div id="upload-results" class="result-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Ask</h2>
+            <span id="query-status" class="status-text">Ready</span>
+          </div>
+          <form id="query-form" class="stack">
+            <textarea id="question" rows="4">What should generated answers cite?</textarea>
+            <div class="control-grid">
+              <label>
+                Retriever
+                <select id="retriever">
+                  <option value="hybrid">hybrid</option>
+                  <option value="dense">dense</option>
+                  <option value="bm25">bm25</option>
+                  <option value="multi_query">multi_query</option>
+                  <option value="query_decomposition">query_decomposition</option>
+                  <option value="multi_hop">multi_hop</option>
+                </select>
+              </label>
+              <label>
+                Reranker
+                <select id="reranker">
+                  <option value="keyword_overlap">keyword_overlap</option>
+                  <option value="identity">identity</option>
+                  <option value="cross_encoder">cross_encoder</option>
+                  <option value="bge">bge</option>
+                </select>
+              </label>
+              <label>
+                Top K
+                <input id="top-k" type="number" value="20" min="1" max="100" />
+              </label>
+              <label>
+                Rerank K
+                <input id="rerank-top-k" type="number" value="5" min="1" max="25" />
+              </label>
+            </div>
+            <button type="submit">Run Query</button>
+          </form>
+          <div id="answer" class="answer-box">Ask a question to see the grounded answer.</div>
+          <div id="sources" class="source-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Evaluate Current Answer</h2>
+            <span id="eval-status" class="status-text">Waiting for query</span>
+          </div>
+          <form id="evaluate-form" class="stack">
+            <textarea id="ground-truth" rows="3" placeholder="Optional ground truth answer"></textarea>
+            <label class="checkbox-row">
+              <input id="persist-eval" type="checkbox" checked />
+              Persist evaluation report
+            </label>
+            <button type="submit">Evaluate</button>
+          </form>
+          <div id="evaluation-results" class="result-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Benchmark</h2>
+            <span id="benchmark-status" class="status-text">Ready</span>
+          </div>
+          <form id="benchmark-form" class="stack">
+            <input id="benchmark-name" value="frontend-comparison" />
+            <textarea id="benchmark-questions" rows="4">What should generated answers cite?
+When do high-risk answers require evaluation?</textarea>
+            <button type="submit">Run Benchmark</button>
+          </form>
+          <table>
+            <thead>
+              <tr>
+                <th>Retriever</th>
+                <th>Reranker</th>
+                <th>Quality</th>
+                <th>Hallucination</th>
+                <th>p95</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard"></tbody>
+          </table>
+        </section>
       </section>
     </main>
     <script src="./main.js"></script>

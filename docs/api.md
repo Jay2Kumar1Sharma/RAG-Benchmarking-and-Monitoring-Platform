@@ -66,3 +66,13 @@ curl -X POST http://localhost:8000/api/v1/upload-documents `
 }
 ```
 
+## Frontend
+
+Open `frontend/index.html` in a browser after starting the API. The page calls the same endpoints documented above and lets you:
+
+- Upload `.txt`, `.md`, `.pdf`, and `.docx` documents.
+- Ask questions against the ingested corpus.
+- Inspect retrieved source chunks.
+- Evaluate the latest answer.
+- Run benchmark comparisons.
+- Refresh dashboard metrics.

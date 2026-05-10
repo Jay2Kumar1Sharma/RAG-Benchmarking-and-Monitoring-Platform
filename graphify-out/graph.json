@@ -90,7 +90,7 @@
       "source_file": "app\\main.py",
       "source_location": "L1",
       "id": "app_main_py",
-      "community": 11,
+      "community": 12,
       "norm_label": "main.py"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "app\\main.py",
       "source_location": "L20",
       "id": "app_main_lifespan",
-      "community": 11,
+      "community": 12,
       "norm_label": "lifespan()"
     },
     {
@@ -108,7 +108,7 @@
       "source_file": "app\\main.py",
       "source_location": "L27",
       "id": "app_main_create_app",
-      "community": 11,
+      "community": 12,
       "norm_label": "create_app()"
     },
     {
@@ -117,7 +117,7 @@
       "source_file": "app\\__init__.py",
       "source_location": "L1",
       "id": "app_init_py",
-      "community": 23,
+      "community": 22,
       "norm_label": "__init__.py"
     },
     {
@@ -125,7 +125,7 @@
       "file_type": "rationale",
       "source_file": "app\\__init__.py",
       "source_location": "L1",
-      "community": 23,
+      "community": 22,
       "norm_label": "enterprise rag evaluation and observability platform.",
       "id": "app_init_rationale_1"
     },
@@ -171,7 +171,7 @@
       "source_file": "app\\agents\\__init__.py",
       "source_location": "L1",
       "id": "app_agents_init_py",
-      "community": 24,
+      "community": 23,
       "norm_label": "__init__.py"
     },
     {
@@ -179,7 +179,7 @@
       "file_type": "rationale",
       "source_file": "app\\agents\\__init__.py",
       "source_location": "L1",
-      "community": 24,
+      "community": 23,
       "norm_label": "agentic retrieval orchestration.",
       "id": "agents_init_rationale_1"
     },
@@ -189,7 +189,7 @@
       "source_file": "app\\api\\dependencies.py",
       "source_location": "L1",
       "id": "app_api_dependencies_py",
-      "community": 10,
+      "community": 9,
       "norm_label": "dependencies.py"
     },
     {
@@ -198,7 +198,7 @@
       "source_file": "app\\api\\dependencies.py",
       "source_location": "L14",
       "id": "api_dependencies_get_db_session",
-      "community": 10,
+      "community": 9,
       "norm_label": "get_db_session()"
     },
     {
@@ -207,7 +207,7 @@
       "source_file": "app\\api\\dependencies.py",
       "source_location": "L19",
       "id": "api_dependencies_get_ingestion_service",
-      "community": 10,
+      "community": 9,
       "norm_label": "get_ingestion_service()"
     },
     {
@@ -216,7 +216,7 @@
       "source_file": "app\\api\\dependencies.py",
       "source_location": "L23",
       "id": "api_dependencies_get_rag_service",
-      "community": 10,
+      "community": 9,
       "norm_label": "get_rag_service()"
     },
     {
@@ -225,7 +225,7 @@
       "source_file": "app\\api\\dependencies.py",
       "source_location": "L27",
       "id": "api_dependencies_get_evaluation_service",
-      "community": 10,
+      "community": 9,
       "norm_label": "get_evaluation_service()"
     },
     {
@@ -234,7 +234,7 @@
       "source_file": "app\\api\\dependencies.py",
       "source_location": "L31",
       "id": "api_dependencies_get_benchmark_service",
-      "community": 10,
+      "community": 9,
       "norm_label": "get_benchmark_service()"
     },
     {
@@ -243,7 +243,7 @@
       "source_file": "app\\api\\dependencies.py",
       "source_location": "L35",
       "id": "api_dependencies_get_experiment_service",
-      "community": 10,
+      "community": 9,
       "norm_label": "get_experiment_service()"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "app\\api\\router.py",
       "source_location": "L1",
       "id": "app_api_router_py",
-      "community": 42,
+      "community": 41,
       "norm_label": "router.py"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "app\\api\\__init__.py",
       "source_location": "L1",
       "id": "app_api_init_py",
-      "community": 43,
+      "community": 42,
       "norm_label": "__init__.py"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "app\\api\\routes\\benchmark.py",
       "source_location": "L1",
       "id": "app_api_routes_benchmark_py",
-      "community": 25,
+      "community": 24,
       "norm_label": "benchmark.py"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "app\\api\\routes\\benchmark.py",
       "source_location": "L11",
       "id": "routes_benchmark_benchmark",
-      "community": 25,
+      "community": 24,
       "norm_label": "benchmark()"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "app\\api\\routes\\documents.py",
       "source_location": "L1",
       "id": "app_api_routes_documents_py",
-      "community": 26,
+      "community": 25,
       "norm_label": "documents.py"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "app\\api\\routes\\documents.py",
       "source_location": "L11",
       "id": "routes_documents_upload_documents",
-      "community": 26,
+      "community": 25,
       "norm_label": "upload_documents()"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "app\\api\\routes\\evaluation.py",
       "source_location": "L1",
       "id": "app_api_routes_evaluation_py",
-      "community": 27,
+      "community": 26,
       "norm_label": "evaluation.py"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "app\\api\\routes\\evaluation.py",
       "source_location": "L11",
       "id": "routes_evaluation_evaluate",
-      "community": 27,
+      "community": 26,
       "norm_label": "evaluate()"
     },
     {
@@ -504,7 +504,7 @@
       "source_file": "app\\benchmarking\\reports.py",
       "source_location": "L1",
       "id": "app_benchmarking_reports_py",
-      "community": 5,
+      "community": 4,
       "norm_label": "reports.py"
     },
     {
@@ -513,7 +513,7 @@
       "source_file": "app\\benchmarking\\reports.py",
       "source_location": "L8",
       "id": "benchmarking_reports_benchmarkreportwriter",
-      "community": 5,
+      "community": 4,
       "norm_label": "benchmarkreportwriter"
     },
     {
@@ -522,7 +522,7 @@
       "source_file": "app\\benchmarking\\reports.py",
       "source_location": "L9",
       "id": "benchmarking_reports_benchmarkreportwriter_init",
-      "community": 5,
+      "community": 4,
       "norm_label": ".__init__()"
     },
     {
@@ -531,7 +531,7 @@
       "source_file": "app\\benchmarking\\reports.py",
       "source_location": "L12",
       "id": "benchmarking_reports_benchmarkreportwriter_write",
-      "community": 5,
+      "community": 4,
       "norm_label": ".write()"
     },
     {
@@ -540,7 +540,7 @@
       "source_file": "app\\benchmarking\\runner.py",
       "source_location": "L1",
       "id": "app_benchmarking_runner_py",
-      "community": 5,
+      "community": 4,
       "norm_label": "runner.py"
     },
     {
@@ -549,7 +549,7 @@
       "source_file": "app\\benchmarking\\runner.py",
       "source_location": "L9",
       "id": "benchmarking_runner_benchmarkrunner",
-      "community": 5,
+      "community": 4,
       "norm_label": "benchmarkrunner"
     },
     {
@@ -558,7 +558,7 @@
       "source_file": "app\\benchmarking\\runner.py",
       "source_location": "L10",
       "id": "benchmarking_runner_benchmarkrunner_init",
-      "community": 5,
+      "community": 4,
       "norm_label": ".__init__()"
     },
     {
@@ -567,7 +567,7 @@
       "source_file": "app\\benchmarking\\runner.py",
       "source_location": "L13",
       "id": "benchmarking_runner_benchmarkrunner_run",
-      "community": 5,
+      "community": 4,
       "norm_label": ".run()"
     },
     {
@@ -576,7 +576,7 @@
       "source_file": "app\\benchmarking\\runner.py",
       "source_location": "L37",
       "id": "benchmarking_runner_score_variant",
-      "community": 5,
+      "community": 4,
       "norm_label": "_score_variant()"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "app\\benchmarking\\runner.py",
       "source_location": "L63",
       "id": "benchmarking_runner_variant_score",
-      "community": 5,
+      "community": 4,
       "norm_label": "_variant_score()"
     },
     {
@@ -594,7 +594,7 @@
       "source_file": "app\\benchmarking\\runner.py",
       "source_location": "L76",
       "id": "benchmarking_runner_latency_score",
-      "community": 5,
+      "community": 4,
       "norm_label": "_latency_score()"
     },
     {
@@ -603,7 +603,7 @@
       "source_file": "app\\benchmarking\\__init__.py",
       "source_location": "L1",
       "id": "app_benchmarking_init_py",
-      "community": 28,
+      "community": 27,
       "norm_label": "__init__.py"
     },
     {
@@ -611,7 +611,7 @@
       "file_type": "rationale",
       "source_file": "app\\benchmarking\\__init__.py",
       "source_location": "L1",
-      "community": 28,
+      "community": 27,
       "norm_label": "benchmark execution and experiment comparison.",
       "id": "benchmarking_init_rationale_1"
     },
@@ -621,7 +621,7 @@
       "source_file": "app\\config\\__init__.py",
       "source_location": "L1",
       "id": "app_config_init_py",
-      "community": 29,
+      "community": 28,
       "norm_label": "__init__.py"
     },
     {
@@ -629,7 +629,7 @@
       "file_type": "rationale",
       "source_file": "app\\config\\__init__.py",
       "source_location": "L1",
-      "community": 29,
+      "community": 28,
       "norm_label": "configuration package reserved for environment-specific settings.",
       "id": "config_init_rationale_1"
     },
@@ -675,7 +675,7 @@
       "source_file": "app\\core\\exceptions.py",
       "source_location": "L1",
       "id": "app_core_exceptions_py",
-      "community": 11,
+      "community": 12,
       "norm_label": "exceptions.py"
     },
     {
@@ -711,7 +711,7 @@
       "source_file": "app\\core\\exceptions.py",
       "source_location": "L16",
       "id": "core_exceptions_install_exception_handlers",
-      "community": 11,
+      "community": 12,
       "norm_label": "install_exception_handlers()"
     },
     {
@@ -720,7 +720,7 @@
       "source_file": "app\\core\\logging.py",
       "source_location": "L1",
       "id": "app_core_logging_py",
-      "community": 11,
+      "community": 12,
       "norm_label": "logging.py"
     },
     {
@@ -729,7 +729,7 @@
       "source_file": "app\\core\\logging.py",
       "source_location": "L8",
       "id": "core_logging_configure_logging",
-      "community": 11,
+      "community": 12,
       "norm_label": "configure_logging()"
     },
     {
@@ -738,7 +738,7 @@
       "source_file": "app\\core\\logging.py",
       "source_location": "L22",
       "id": "core_logging_get_logger",
-      "community": 11,
+      "community": 12,
       "norm_label": "get_logger()"
     },
     {
@@ -783,7 +783,7 @@
       "source_file": "app\\core\\__init__.py",
       "source_location": "L1",
       "id": "app_core_init_py",
-      "community": 30,
+      "community": 29,
       "norm_label": "__init__.py"
     },
     {
@@ -791,7 +791,7 @@
       "file_type": "rationale",
       "source_file": "app\\core\\__init__.py",
       "source_location": "L1",
-      "community": 30,
+      "community": 29,
       "norm_label": "core application services.",
       "id": "core_init_rationale_1"
     },
@@ -1080,7 +1080,7 @@
       "source_file": "app\\database\\session.py",
       "source_location": "L1",
       "id": "app_database_session_py",
-      "community": 44,
+      "community": 43,
       "norm_label": "session.py"
     },
     {
@@ -1089,7 +1089,7 @@
       "source_file": "app\\database\\__init__.py",
       "source_location": "L1",
       "id": "app_database_init_py",
-      "community": 31,
+      "community": 30,
       "norm_label": "__init__.py"
     },
     {
@@ -1097,7 +1097,7 @@
       "file_type": "rationale",
       "source_file": "app\\database\\__init__.py",
       "source_location": "L1",
-      "community": 31,
+      "community": 30,
       "norm_label": "database mappings and repositories.",
       "id": "database_init_rationale_1"
     },
@@ -1152,7 +1152,7 @@
       "source_file": "app\\evaluation\\engine.py",
       "source_location": "L1",
       "id": "app_evaluation_engine_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "engine.py"
     },
     {
@@ -1161,7 +1161,7 @@
       "source_file": "app\\evaluation\\engine.py",
       "source_location": "L25",
       "id": "evaluation_engine_evaluationengine",
-      "community": 1,
+      "community": 2,
       "norm_label": "evaluationengine"
     },
     {
@@ -1170,7 +1170,7 @@
       "source_file": "app\\evaluation\\engine.py",
       "source_location": "L26",
       "id": "evaluation_engine_evaluationengine_init",
-      "community": 1,
+      "community": 2,
       "norm_label": ".__init__()"
     },
     {
@@ -1179,7 +1179,7 @@
       "source_file": "app\\evaluation\\engine.py",
       "source_location": "L31",
       "id": "evaluation_engine_evaluationengine_evaluate_examples",
-      "community": 1,
+      "community": 2,
       "norm_label": ".evaluate_examples()"
     },
     {
@@ -1188,7 +1188,7 @@
       "source_file": "app\\evaluation\\engine.py",
       "source_location": "L91",
       "id": "evaluation_engine_evaluationengine_aggregate",
-      "community": 1,
+      "community": 2,
       "norm_label": "._aggregate()"
     },
     {
@@ -1197,7 +1197,7 @@
       "source_file": "app\\evaluation\\engine.py",
       "source_location": "L101",
       "id": "evaluation_engine_to_text_chunks",
-      "community": 1,
+      "community": 2,
       "norm_label": "to_text_chunks()"
     },
     {
@@ -1206,7 +1206,7 @@
       "source_file": "app\\evaluation\\engine.py",
       "source_location": "L120",
       "id": "evaluation_engine_performance_from_example",
-      "community": 1,
+      "community": 2,
       "norm_label": "_performance_from_example()"
     },
     {
@@ -1215,7 +1215,7 @@
       "source_file": "app\\evaluation\\generation_metrics.py",
       "source_location": "L1",
       "id": "app_evaluation_generation_metrics_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "generation_metrics.py"
     },
     {
@@ -1224,7 +1224,7 @@
       "source_file": "app\\evaluation\\generation_metrics.py",
       "source_location": "L6",
       "id": "evaluation_generation_metrics_answer_relevance",
-      "community": 1,
+      "community": 2,
       "norm_label": "answer_relevance()"
     },
     {
@@ -1233,7 +1233,7 @@
       "source_file": "app\\evaluation\\generation_metrics.py",
       "source_location": "L12",
       "id": "evaluation_generation_metrics_groundedness",
-      "community": 1,
+      "community": 2,
       "norm_label": "groundedness()"
     },
     {
@@ -1242,7 +1242,7 @@
       "source_file": "app\\evaluation\\generation_metrics.py",
       "source_location": "L18",
       "id": "evaluation_generation_metrics_faithfulness",
-      "community": 1,
+      "community": 2,
       "norm_label": "faithfulness()"
     },
     {
@@ -1251,7 +1251,7 @@
       "source_file": "app\\evaluation\\generation_metrics.py",
       "source_location": "L24",
       "id": "evaluation_generation_metrics_semantic_similarity",
-      "community": 1,
+      "community": 2,
       "norm_label": "semantic_similarity()"
     },
     {
@@ -1260,7 +1260,7 @@
       "source_file": "app\\evaluation\\generation_metrics.py",
       "source_location": "L33",
       "id": "evaluation_generation_metrics_unsupported_sentences",
-      "community": 1,
+      "community": 2,
       "norm_label": "unsupported_sentences()"
     },
     {
@@ -1269,7 +1269,7 @@
       "source_file": "app\\evaluation\\generation_metrics.py",
       "source_location": "L43",
       "id": "evaluation_generation_metrics_tokens",
-      "community": 1,
+      "community": 2,
       "norm_label": "_tokens()"
     },
     {
@@ -1278,7 +1278,7 @@
       "source_file": "app\\evaluation\\generation_metrics.py",
       "source_location": "L47",
       "id": "evaluation_generation_metrics_sentences",
-      "community": 1,
+      "community": 2,
       "norm_label": "_sentences()"
     },
     {
@@ -1287,7 +1287,7 @@
       "source_file": "app\\evaluation\\hallucination.py",
       "source_location": "L1",
       "id": "app_evaluation_hallucination_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "hallucination.py"
     },
     {
@@ -1296,7 +1296,7 @@
       "source_file": "app\\evaluation\\hallucination.py",
       "source_location": "L9",
       "id": "evaluation_hallucination_hallucinationreport",
-      "community": 1,
+      "community": 2,
       "norm_label": "hallucinationreport"
     },
     {
@@ -1305,7 +1305,7 @@
       "source_file": "app\\evaluation\\hallucination.py",
       "source_location": "L19",
       "id": "evaluation_hallucination_hallucinationdetector",
-      "community": 1,
+      "community": 2,
       "norm_label": "hallucinationdetector"
     },
     {
@@ -1314,7 +1314,7 @@
       "source_file": "app\\evaluation\\hallucination.py",
       "source_location": "L20",
       "id": "evaluation_hallucination_hallucinationdetector_detect",
-      "community": 1,
+      "community": 2,
       "norm_label": ".detect()"
     },
     {
@@ -1323,7 +1323,7 @@
       "source_file": "app\\evaluation\\hallucination.py",
       "source_location": "L53",
       "id": "evaluation_hallucination_split_sentences",
-      "community": 1,
+      "community": 2,
       "norm_label": "_split_sentences()"
     },
     {
@@ -1332,7 +1332,7 @@
       "source_file": "app\\evaluation\\hallucination.py",
       "source_location": "L57",
       "id": "evaluation_hallucination_citations",
-      "community": 1,
+      "community": 2,
       "norm_label": "_citations()"
     },
     {
@@ -1341,7 +1341,7 @@
       "source_file": "app\\evaluation\\hallucination.py",
       "source_location": "L61",
       "id": "evaluation_hallucination_citation_coverage",
-      "community": 1,
+      "community": 2,
       "norm_label": "_citation_coverage()"
     },
     {
@@ -1350,7 +1350,7 @@
       "source_file": "app\\evaluation\\hallucination.py",
       "source_location": "L67",
       "id": "evaluation_hallucination_citation_precision",
-      "community": 1,
+      "community": 2,
       "norm_label": "_citation_precision()"
     },
     {
@@ -1359,7 +1359,7 @@
       "source_file": "app\\evaluation\\hallucination.py",
       "source_location": "L75",
       "id": "evaluation_hallucination_contradiction_score",
-      "community": 1,
+      "community": 2,
       "norm_label": "_contradiction_score()"
     },
     {
@@ -1368,7 +1368,7 @@
       "source_file": "app\\evaluation\\performance.py",
       "source_location": "L1",
       "id": "app_evaluation_performance_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "performance.py"
     },
     {
@@ -1377,7 +1377,7 @@
       "source_file": "app\\evaluation\\performance.py",
       "source_location": "L5",
       "id": "evaluation_performance_performancemetrics",
-      "community": 1,
+      "community": 2,
       "norm_label": "performancemetrics"
     },
     {
@@ -1386,7 +1386,7 @@
       "source_file": "app\\evaluation\\performance.py",
       "source_location": "L14",
       "id": "evaluation_performance_performancemetrics_as_dict",
-      "community": 1,
+      "community": 2,
       "norm_label": ".as_dict()"
     },
     {
@@ -1395,7 +1395,7 @@
       "source_file": "app\\evaluation\\performance.py",
       "source_location": "L26",
       "id": "evaluation_performance_aggregate_performance",
-      "community": 1,
+      "community": 2,
       "norm_label": "aggregate_performance()"
     },
     {
@@ -1404,7 +1404,7 @@
       "source_file": "app\\evaluation\\reporting.py",
       "source_location": "L1",
       "id": "app_evaluation_reporting_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "reporting.py"
     },
     {
@@ -1413,7 +1413,7 @@
       "source_file": "app\\evaluation\\reporting.py",
       "source_location": "L6",
       "id": "evaluation_reporting_evaluationreportwriter",
-      "community": 1,
+      "community": 2,
       "norm_label": "evaluationreportwriter"
     },
     {
@@ -1422,7 +1422,7 @@
       "source_file": "app\\evaluation\\reporting.py",
       "source_location": "L7",
       "id": "evaluation_reporting_evaluationreportwriter_init",
-      "community": 1,
+      "community": 2,
       "norm_label": ".__init__()"
     },
     {
@@ -1431,7 +1431,7 @@
       "source_file": "app\\evaluation\\reporting.py",
       "source_location": "L10",
       "id": "evaluation_reporting_evaluationreportwriter_write",
-      "community": 1,
+      "community": 2,
       "norm_label": ".write()"
     },
     {
@@ -1440,7 +1440,7 @@
       "source_file": "app\\evaluation\\reporting.py",
       "source_location": "L32",
       "id": "evaluation_reporting_evaluationreportwriter_markdown",
-      "community": 1,
+      "community": 2,
       "norm_label": "._markdown()"
     },
     {
@@ -1449,7 +1449,7 @@
       "source_file": "app\\evaluation\\reporting.py",
       "source_location": "L58",
       "id": "evaluation_reporting_metric_lines",
-      "community": 1,
+      "community": 2,
       "norm_label": "_metric_lines()"
     },
     {
@@ -1458,7 +1458,7 @@
       "source_file": "app\\evaluation\\retrieval_metrics.py",
       "source_location": "L1",
       "id": "app_evaluation_retrieval_metrics_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "retrieval_metrics.py"
     },
     {
@@ -1467,7 +1467,7 @@
       "source_file": "app\\evaluation\\retrieval_metrics.py",
       "source_location": "L6",
       "id": "evaluation_retrieval_metrics_context_recall",
-      "community": 1,
+      "community": 2,
       "norm_label": "context_recall()"
     },
     {
@@ -1476,7 +1476,7 @@
       "source_file": "app\\evaluation\\retrieval_metrics.py",
       "source_location": "L13",
       "id": "evaluation_retrieval_metrics_context_precision",
-      "community": 1,
+      "community": 2,
       "norm_label": "context_precision()"
     },
     {
@@ -1485,7 +1485,7 @@
       "source_file": "app\\evaluation\\retrieval_metrics.py",
       "source_location": "L20",
       "id": "evaluation_retrieval_metrics_hit_at_k",
-      "community": 1,
+      "community": 2,
       "norm_label": "hit_at_k()"
     },
     {
@@ -1494,7 +1494,7 @@
       "source_file": "app\\evaluation\\retrieval_metrics.py",
       "source_location": "L25",
       "id": "evaluation_retrieval_metrics_mean_reciprocal_rank",
-      "community": 1,
+      "community": 2,
       "norm_label": "mean_reciprocal_rank()"
     },
     {
@@ -1503,7 +1503,7 @@
       "source_file": "app\\evaluation\\retrieval_metrics.py",
       "source_location": "L33",
       "id": "evaluation_retrieval_metrics_ndcg",
-      "community": 1,
+      "community": 2,
       "norm_label": "ndcg()"
     },
     {
@@ -1512,7 +1512,7 @@
       "source_file": "app\\evaluation\\__init__.py",
       "source_location": "L1",
       "id": "app_evaluation_init_py",
-      "community": 32,
+      "community": 31,
       "norm_label": "__init__.py"
     },
     {
@@ -1520,7 +1520,7 @@
       "file_type": "rationale",
       "source_file": "app\\evaluation\\__init__.py",
       "source_location": "L1",
-      "community": 32,
+      "community": 31,
       "norm_label": "rag evaluation and hallucination detection.",
       "id": "evaluation_init_rationale_1"
     },
@@ -1539,7 +1539,7 @@
       "source_file": "app\\models\\rag.py",
       "source_location": "L5",
       "id": "models_rag_textchunk",
-      "community": 2,
+      "community": 1,
       "norm_label": "textchunk"
     },
     {
@@ -1566,7 +1566,7 @@
       "source_file": "app\\models\\__init__.py",
       "source_location": "L1",
       "id": "app_models_init_py",
-      "community": 33,
+      "community": 32,
       "norm_label": "__init__.py"
     },
     {
@@ -1574,7 +1574,7 @@
       "file_type": "rationale",
       "source_file": "app\\models\\__init__.py",
       "source_location": "L1",
-      "community": 33,
+      "community": 32,
       "norm_label": "domain models independent from transport and persistence.",
       "id": "models_init_rationale_1"
     },
@@ -1584,7 +1584,7 @@
       "source_file": "app\\observability\\experiment_tracking.py",
       "source_location": "L1",
       "id": "app_observability_experiment_tracking_py",
-      "community": 5,
+      "community": 4,
       "norm_label": "experiment_tracking.py"
     },
     {
@@ -1593,7 +1593,7 @@
       "source_file": "app\\observability\\experiment_tracking.py",
       "source_location": "L5",
       "id": "observability_experiment_tracking_experimenttracker",
-      "community": 5,
+      "community": 4,
       "norm_label": "experimenttracker"
     },
     {
@@ -1611,7 +1611,7 @@
       "source_file": "app\\observability\\experiment_tracking.py",
       "source_location": "L7",
       "id": "observability_experiment_tracking_log_run",
-      "community": 5,
+      "community": 4,
       "norm_label": "log_run()"
     },
     {
@@ -1620,7 +1620,7 @@
       "source_file": "app\\observability\\experiment_tracking.py",
       "source_location": "L11",
       "id": "observability_experiment_tracking_noopexperimenttracker",
-      "community": 5,
+      "community": 4,
       "norm_label": "noopexperimenttracker"
     },
     {
@@ -1629,7 +1629,7 @@
       "source_file": "app\\observability\\experiment_tracking.py",
       "source_location": "L12",
       "id": "observability_experiment_tracking_noopexperimenttracker_log_run",
-      "community": 5,
+      "community": 4,
       "norm_label": ".log_run()"
     },
     {
@@ -1638,7 +1638,7 @@
       "source_file": "app\\observability\\experiment_tracking.py",
       "source_location": "L16",
       "id": "observability_experiment_tracking_mlflowtracker",
-      "community": 5,
+      "community": 4,
       "norm_label": "mlflowtracker"
     },
     {
@@ -1647,7 +1647,7 @@
       "source_file": "app\\observability\\experiment_tracking.py",
       "source_location": "L17",
       "id": "observability_experiment_tracking_mlflowtracker_log_run",
-      "community": 5,
+      "community": 4,
       "norm_label": ".log_run()"
     },
     {
@@ -1656,7 +1656,7 @@
       "source_file": "app\\observability\\experiment_tracking.py",
       "source_location": "L25",
       "id": "observability_experiment_tracking_langsmithtracker",
-      "community": 5,
+      "community": 4,
       "norm_label": "langsmithtracker"
     },
     {
@@ -1665,7 +1665,7 @@
       "source_file": "app\\observability\\experiment_tracking.py",
       "source_location": "L26",
       "id": "observability_experiment_tracking_langsmithtracker_log_run",
-      "community": 5,
+      "community": 4,
       "norm_label": ".log_run()"
     },
     {
@@ -1674,7 +1674,7 @@
       "source_file": "app\\observability\\metrics.py",
       "source_location": "L1",
       "id": "app_observability_metrics_py",
-      "community": 34,
+      "community": 33,
       "norm_label": "metrics.py"
     },
     {
@@ -1683,7 +1683,7 @@
       "source_file": "app\\observability\\metrics.py",
       "source_location": "L20",
       "id": "observability_metrics_metrics",
-      "community": 34,
+      "community": 33,
       "norm_label": "metrics()"
     },
     {
@@ -1764,7 +1764,7 @@
       "source_file": "app\\observability\\tracing.py",
       "source_location": "L1",
       "id": "app_observability_tracing_py",
-      "community": 35,
+      "community": 34,
       "norm_label": "tracing.py"
     },
     {
@@ -1773,7 +1773,7 @@
       "source_file": "app\\observability\\tracing.py",
       "source_location": "L11",
       "id": "observability_tracing_trace_span",
-      "community": 35,
+      "community": 34,
       "norm_label": "trace_span()"
     },
     {
@@ -1782,7 +1782,7 @@
       "source_file": "app\\observability\\__init__.py",
       "source_location": "L1",
       "id": "app_observability_init_py",
-      "community": 36,
+      "community": 35,
       "norm_label": "__init__.py"
     },
     {
@@ -1790,7 +1790,7 @@
       "file_type": "rationale",
       "source_file": "app\\observability\\__init__.py",
       "source_location": "L1",
-      "community": 36,
+      "community": 35,
       "norm_label": "metrics, tracing, and structured telemetry.",
       "id": "observability_init_rationale_1"
     },
@@ -1800,7 +1800,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L1",
       "id": "app_rag_chunking_py",
-      "community": 4,
+      "community": 5,
       "norm_label": "chunking.py"
     },
     {
@@ -1809,7 +1809,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L10",
       "id": "rag_chunking_chunkingconfig",
-      "community": 4,
+      "community": 5,
       "norm_label": "chunkingconfig"
     },
     {
@@ -1818,7 +1818,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L16",
       "id": "rag_chunking_chunker",
-      "community": 4,
+      "community": 5,
       "norm_label": "chunker"
     },
     {
@@ -1827,7 +1827,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L18",
       "id": "rag_chunking_split",
-      "community": 4,
+      "community": 5,
       "norm_label": "split()"
     },
     {
@@ -1836,7 +1836,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L22",
       "id": "rag_chunking_recursivechunker",
-      "community": 4,
+      "community": 5,
       "norm_label": "recursivechunker"
     },
     {
@@ -1845,7 +1845,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L23",
       "id": "rag_chunking_recursivechunker_init",
-      "community": 4,
+      "community": 5,
       "norm_label": ".__init__()"
     },
     {
@@ -1854,7 +1854,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L26",
       "id": "rag_chunking_recursivechunker_split",
-      "community": 4,
+      "community": 5,
       "norm_label": ".split()"
     },
     {
@@ -1863,7 +1863,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L42",
       "id": "rag_chunking_recursivechunker_with_overlap",
-      "community": 4,
+      "community": 5,
       "norm_label": "._with_overlap()"
     },
     {
@@ -1872,7 +1872,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L59",
       "id": "rag_chunking_semanticchunker",
-      "community": 4,
+      "community": 5,
       "norm_label": "semanticchunker"
     },
     {
@@ -1881,7 +1881,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L62",
       "id": "rag_chunking_semanticchunker_init",
-      "community": 4,
+      "community": 5,
       "norm_label": ".__init__()"
     },
     {
@@ -1890,7 +1890,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L65",
       "id": "rag_chunking_semanticchunker_split",
-      "community": 4,
+      "community": 5,
       "norm_label": ".split()"
     },
     {
@@ -1899,7 +1899,7 @@
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L90",
       "id": "rag_chunking_build_chunker",
-      "community": 4,
+      "community": 5,
       "norm_label": "build_chunker()"
     },
     {
@@ -1907,7 +1907,7 @@
       "file_type": "rationale",
       "source_file": "app\\rag\\chunking.py",
       "source_location": "L60",
-      "community": 4,
+      "community": 5,
       "norm_label": "sentence-window semantic chunking without requiring a model at import time.",
       "id": "rag_chunking_rationale_60"
     },
@@ -1917,7 +1917,7 @@
       "source_file": "app\\rag\\context_compression.py",
       "source_location": "L1",
       "id": "app_rag_context_compression_py",
-      "community": 2,
+      "community": 1,
       "norm_label": "context_compression.py"
     },
     {
@@ -1926,7 +1926,7 @@
       "source_file": "app\\rag\\context_compression.py",
       "source_location": "L4",
       "id": "rag_context_compression_contextcompressor",
-      "community": 2,
+      "community": 1,
       "norm_label": "contextcompressor"
     },
     {
@@ -1935,7 +1935,7 @@
       "source_file": "app\\rag\\context_compression.py",
       "source_location": "L5",
       "id": "rag_context_compression_contextcompressor_init",
-      "community": 2,
+      "community": 1,
       "norm_label": ".__init__()"
     },
     {
@@ -1944,7 +1944,7 @@
       "source_file": "app\\rag\\context_compression.py",
       "source_location": "L8",
       "id": "rag_context_compression_contextcompressor_compress",
-      "community": 2,
+      "community": 1,
       "norm_label": ".compress()"
     },
     {
@@ -1953,7 +1953,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L1",
       "id": "app_rag_document_loaders_py",
-      "community": 9,
+      "community": 10,
       "norm_label": "document_loaders.py"
     },
     {
@@ -1962,7 +1962,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L7",
       "id": "rag_document_loaders_documentloader",
-      "community": 9,
+      "community": 10,
       "norm_label": "documentloader"
     },
     {
@@ -1971,7 +1971,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L11",
       "id": "rag_document_loaders_load",
-      "community": 9,
+      "community": 10,
       "norm_label": "load()"
     },
     {
@@ -1980,7 +1980,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L15",
       "id": "rag_document_loaders_plaintextloader",
-      "community": 9,
+      "community": 10,
       "norm_label": "plaintextloader"
     },
     {
@@ -1989,7 +1989,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L18",
       "id": "rag_document_loaders_plaintextloader_load",
-      "community": 9,
+      "community": 10,
       "norm_label": ".load()"
     },
     {
@@ -1998,7 +1998,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L24",
       "id": "rag_document_loaders_pdfloader",
-      "community": 9,
+      "community": 10,
       "norm_label": "pdfloader"
     },
     {
@@ -2007,7 +2007,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L27",
       "id": "rag_document_loaders_pdfloader_load",
-      "community": 9,
+      "community": 10,
       "norm_label": ".load()"
     },
     {
@@ -2016,7 +2016,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L34",
       "id": "rag_document_loaders_docxloader",
-      "community": 9,
+      "community": 10,
       "norm_label": "docxloader"
     },
     {
@@ -2025,7 +2025,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L37",
       "id": "rag_document_loaders_docxloader_load",
-      "community": 9,
+      "community": 10,
       "norm_label": ".load()"
     },
     {
@@ -2034,7 +2034,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L44",
       "id": "rag_document_loaders_ocrreadyloader",
-      "community": 9,
+      "community": 10,
       "norm_label": "ocrreadyloader"
     },
     {
@@ -2043,7 +2043,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L49",
       "id": "rag_document_loaders_ocrreadyloader_load",
-      "community": 9,
+      "community": 10,
       "norm_label": ".load()"
     },
     {
@@ -2052,7 +2052,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L53",
       "id": "rag_document_loaders_loaderregistry",
-      "community": 9,
+      "community": 10,
       "norm_label": "loaderregistry"
     },
     {
@@ -2061,7 +2061,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L54",
       "id": "rag_document_loaders_loaderregistry_init",
-      "community": 9,
+      "community": 10,
       "norm_label": ".__init__()"
     },
     {
@@ -2070,7 +2070,7 @@
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L57",
       "id": "rag_document_loaders_loaderregistry_for_filename",
-      "community": 9,
+      "community": 10,
       "norm_label": ".for_filename()"
     },
     {
@@ -2078,7 +2078,7 @@
       "file_type": "rationale",
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L45",
-      "community": 9,
+      "community": 10,
       "norm_label": "placeholder seam for tesseract, azure ocr, or layout-aware enterprise ocr.",
       "id": "rag_document_loaders_rationale_45"
     },
@@ -2133,7 +2133,7 @@
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L25",
       "id": "rag_embeddings_hashembeddingprovider",
-      "community": 13,
+      "community": 1,
       "norm_label": "hashembeddingprovider"
     },
     {
@@ -2142,7 +2142,7 @@
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L28",
       "id": "rag_embeddings_hashembeddingprovider_init",
-      "community": 13,
+      "community": 1,
       "norm_label": ".__init__()"
     },
     {
@@ -2151,7 +2151,7 @@
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L32",
       "id": "rag_embeddings_hashembeddingprovider_embed_texts",
-      "community": 13,
+      "community": 1,
       "norm_label": ".embed_texts()"
     },
     {
@@ -2160,7 +2160,7 @@
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L35",
       "id": "rag_embeddings_hashembeddingprovider_embed",
-      "community": 13,
+      "community": 1,
       "norm_label": "._embed()"
     },
     {
@@ -2169,7 +2169,7 @@
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L45",
       "id": "rag_embeddings_sentencetransformerembeddingprovider",
-      "community": 13,
+      "community": 0,
       "norm_label": "sentencetransformerembeddingprovider"
     },
     {
@@ -2178,7 +2178,7 @@
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L46",
       "id": "rag_embeddings_sentencetransformerembeddingprovider_init",
-      "community": 13,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -2187,7 +2187,7 @@
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L50",
       "id": "rag_embeddings_sentencetransformerembeddingprovider_embed_texts",
-      "community": 13,
+      "community": 0,
       "norm_label": ".embed_texts()"
     },
     {
@@ -2196,7 +2196,7 @@
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L53",
       "id": "rag_embeddings_sentencetransformerembeddingprovider_embed_sync",
-      "community": 13,
+      "community": 0,
       "norm_label": "._embed_sync()"
     },
     {
@@ -2205,7 +2205,7 @@
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L62",
       "id": "rag_embeddings_cachedembeddingprovider",
-      "community": 0,
+      "community": 1,
       "norm_label": "cachedembeddingprovider"
     },
     {
@@ -2214,7 +2214,7 @@
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L63",
       "id": "rag_embeddings_cachedembeddingprovider_init",
-      "community": 0,
+      "community": 1,
       "norm_label": ".__init__()"
     },
     {
@@ -2258,7 +2258,7 @@
       "file_type": "rationale",
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L26",
-      "community": 13,
+      "community": 1,
       "norm_label": "deterministic local fallback used for tests and offline development.",
       "id": "rag_embeddings_rationale_26"
     },
@@ -2268,7 +2268,7 @@
       "source_file": "app\\rag\\factories.py",
       "source_location": "L1",
       "id": "app_rag_factories_py",
-      "community": 13,
+      "community": 1,
       "norm_label": "factories.py"
     },
     {
@@ -2277,7 +2277,7 @@
       "source_file": "app\\rag\\factories.py",
       "source_location": "L11",
       "id": "rag_factories_build_embedding_provider",
-      "community": 13,
+      "community": 1,
       "norm_label": "build_embedding_provider()"
     },
     {
@@ -2286,7 +2286,7 @@
       "source_file": "app\\rag\\factories.py",
       "source_location": "L19",
       "id": "rag_factories_build_vector_store",
-      "community": 2,
+      "community": 1,
       "norm_label": "build_vector_store()"
     },
     {
@@ -2457,7 +2457,7 @@
       "source_file": "app\\rag\\metadata.py",
       "source_location": "L1",
       "id": "app_rag_metadata_py",
-      "community": 4,
+      "community": 5,
       "norm_label": "metadata.py"
     },
     {
@@ -2466,7 +2466,7 @@
       "source_file": "app\\rag\\metadata.py",
       "source_location": "L7",
       "id": "rag_metadata_read_upload_bytes",
-      "community": 4,
+      "community": 5,
       "norm_label": "read_upload_bytes()"
     },
     {
@@ -2475,7 +2475,7 @@
       "source_file": "app\\rag\\metadata.py",
       "source_location": "L13",
       "id": "rag_metadata_content_hash",
-      "community": 4,
+      "community": 5,
       "norm_label": "content_hash()"
     },
     {
@@ -2484,7 +2484,7 @@
       "source_file": "app\\rag\\metadata.py",
       "source_location": "L17",
       "id": "rag_metadata_metadata_for_upload",
-      "community": 4,
+      "community": 5,
       "norm_label": "metadata_for_upload()"
     },
     {
@@ -2493,7 +2493,7 @@
       "source_file": "app\\rag\\metadata.py",
       "source_location": "L31",
       "id": "rag_metadata_chunk_fingerprint",
-      "community": 4,
+      "community": 5,
       "norm_label": "chunk_fingerprint()"
     },
     {
@@ -2547,7 +2547,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L1",
       "id": "app_rag_rerankers_py",
-      "community": 2,
+      "community": 1,
       "norm_label": "rerankers.py"
     },
     {
@@ -2556,7 +2556,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L9",
       "id": "rag_rerankers_reranker",
-      "community": 2,
+      "community": 1,
       "norm_label": "reranker"
     },
     {
@@ -2565,7 +2565,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L13",
       "id": "rag_rerankers_rerank",
-      "community": 2,
+      "community": 1,
       "norm_label": "rerank()"
     },
     {
@@ -2574,7 +2574,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L17",
       "id": "rag_rerankers_identityreranker",
-      "community": 2,
+      "community": 1,
       "norm_label": "identityreranker"
     },
     {
@@ -2583,7 +2583,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L20",
       "id": "rag_rerankers_identityreranker_rerank",
-      "community": 2,
+      "community": 1,
       "norm_label": ".rerank()"
     },
     {
@@ -2592,7 +2592,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L25",
       "id": "rag_rerankers_keywordoverlapreranker",
-      "community": 2,
+      "community": 1,
       "norm_label": "keywordoverlapreranker"
     },
     {
@@ -2610,7 +2610,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L41",
       "id": "rag_rerankers_crossencoderreranker",
-      "community": 2,
+      "community": 1,
       "norm_label": "crossencoderreranker"
     },
     {
@@ -2619,7 +2619,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L42",
       "id": "rag_rerankers_crossencoderreranker_init",
-      "community": 2,
+      "community": 1,
       "norm_label": ".__init__()"
     },
     {
@@ -2628,7 +2628,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L47",
       "id": "rag_rerankers_crossencoderreranker_rerank",
-      "community": 2,
+      "community": 1,
       "norm_label": ".rerank()"
     },
     {
@@ -2637,7 +2637,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L50",
       "id": "rag_rerankers_crossencoderreranker_rerank_sync",
-      "community": 2,
+      "community": 1,
       "norm_label": "._rerank_sync()"
     },
     {
@@ -2646,7 +2646,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L67",
       "id": "rag_rerankers_bgereranker",
-      "community": 2,
+      "community": 1,
       "norm_label": "bgereranker"
     },
     {
@@ -2655,7 +2655,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L68",
       "id": "rag_rerankers_bgereranker_init",
-      "community": 2,
+      "community": 1,
       "norm_label": ".__init__()"
     },
     {
@@ -2664,7 +2664,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L73",
       "id": "rag_rerankers_coherereranker",
-      "community": 2,
+      "community": 1,
       "norm_label": "coherereranker"
     },
     {
@@ -2673,7 +2673,7 @@
       "source_file": "app\\rag\\rerankers.py",
       "source_location": "L76",
       "id": "rag_rerankers_coherereranker_rerank",
-      "community": 2,
+      "community": 1,
       "norm_label": ".rerank()"
     },
     {
@@ -2718,7 +2718,7 @@
       "source_file": "app\\rag\\retrieval_factory.py",
       "source_location": "L61",
       "id": "rag_retrieval_factory_retrievalfactory_build_reranker",
-      "community": 2,
+      "community": 1,
       "norm_label": ".build_reranker()"
     },
     {
@@ -2970,7 +2970,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L1",
       "id": "app_rag_vectorstores_py",
-      "community": 2,
+      "community": 1,
       "norm_label": "vectorstores.py"
     },
     {
@@ -2988,7 +2988,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L11",
       "id": "rag_vectorstores_upsert",
-      "community": 2,
+      "community": 1,
       "norm_label": "upsert()"
     },
     {
@@ -2997,7 +2997,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L15",
       "id": "rag_vectorstores_search",
-      "community": 2,
+      "community": 1,
       "norm_label": "search()"
     },
     {
@@ -3006,7 +3006,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L25",
       "id": "rag_vectorstores_inmemoryvectorstore",
-      "community": 2,
+      "community": 1,
       "norm_label": "inmemoryvectorstore"
     },
     {
@@ -3015,7 +3015,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L26",
       "id": "rag_vectorstores_inmemoryvectorstore_init",
-      "community": 2,
+      "community": 1,
       "norm_label": ".__init__()"
     },
     {
@@ -3024,7 +3024,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L29",
       "id": "rag_vectorstores_inmemoryvectorstore_upsert",
-      "community": 2,
+      "community": 1,
       "norm_label": ".upsert()"
     },
     {
@@ -3033,7 +3033,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L35",
       "id": "rag_vectorstores_inmemoryvectorstore_search",
-      "community": 2,
+      "community": 1,
       "norm_label": ".search()"
     },
     {
@@ -3042,7 +3042,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L52",
       "id": "rag_vectorstores_cosine",
-      "community": 2,
+      "community": 1,
       "norm_label": "_cosine()"
     },
     {
@@ -3051,7 +3051,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L59",
       "id": "rag_vectorstores_faissvectorstore",
-      "community": 2,
+      "community": 1,
       "norm_label": "faissvectorstore"
     },
     {
@@ -3060,7 +3060,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L62",
       "id": "rag_vectorstores_faissvectorstore_init",
-      "community": 2,
+      "community": 1,
       "norm_label": ".__init__()"
     },
     {
@@ -3069,7 +3069,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L67",
       "id": "rag_vectorstores_faissvectorstore_upsert",
-      "community": 2,
+      "community": 1,
       "norm_label": ".upsert()"
     },
     {
@@ -3078,7 +3078,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L82",
       "id": "rag_vectorstores_faissvectorstore_search",
-      "community": 2,
+      "community": 1,
       "norm_label": ".search()"
     },
     {
@@ -3087,7 +3087,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L105",
       "id": "rag_vectorstores_qdrantvectorstore",
-      "community": 2,
+      "community": 1,
       "norm_label": "qdrantvectorstore"
     },
     {
@@ -3096,7 +3096,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L106",
       "id": "rag_vectorstores_qdrantvectorstore_init",
-      "community": 2,
+      "community": 1,
       "norm_label": ".__init__()"
     },
     {
@@ -3105,7 +3105,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L110",
       "id": "rag_vectorstores_qdrantvectorstore_upsert",
-      "community": 2,
+      "community": 1,
       "norm_label": ".upsert()"
     },
     {
@@ -3114,7 +3114,7 @@
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L136",
       "id": "rag_vectorstores_qdrantvectorstore_search",
-      "community": 2,
+      "community": 1,
       "norm_label": ".search()"
     },
     {
@@ -3122,7 +3122,7 @@
       "file_type": "rationale",
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L60",
-      "community": 2,
+      "community": 1,
       "norm_label": "faiss-backed store when faiss-cpu is installed, with in-memory behavior as fallb",
       "id": "rag_vectorstores_rationale_60"
     },
@@ -3150,7 +3150,7 @@
       "source_file": "app\\rag\\__init__.py",
       "source_location": "L1",
       "id": "app_rag_init_py",
-      "community": 37,
+      "community": 36,
       "norm_label": "__init__.py"
     },
     {
@@ -3158,7 +3158,7 @@
       "file_type": "rationale",
       "source_file": "app\\rag\\__init__.py",
       "source_location": "L1",
-      "community": 37,
+      "community": 36,
       "norm_label": "rag primitives: chunking, embedding, retrieval, reranking, and generation.",
       "id": "rag_init_rationale_1"
     },
@@ -3168,7 +3168,7 @@
       "source_file": "app\\schemas\\benchmark.py",
       "source_location": "L1",
       "id": "app_schemas_benchmark_py",
-      "community": 5,
+      "community": 4,
       "norm_label": "benchmark.py"
     },
     {
@@ -3177,7 +3177,7 @@
       "source_file": "app\\schemas\\benchmark.py",
       "source_location": "L4",
       "id": "schemas_benchmark_benchmarkvariant",
-      "community": 5,
+      "community": 4,
       "norm_label": "benchmarkvariant"
     },
     {
@@ -3195,7 +3195,7 @@
       "source_file": "app\\schemas\\benchmark.py",
       "source_location": "L14",
       "id": "schemas_benchmark_benchmarkrequest",
-      "community": 5,
+      "community": 4,
       "norm_label": "benchmarkrequest"
     },
     {
@@ -3204,7 +3204,7 @@
       "source_file": "app\\schemas\\benchmark.py",
       "source_location": "L21",
       "id": "schemas_benchmark_benchmarkresponse",
-      "community": 5,
+      "community": 4,
       "norm_label": "benchmarkresponse"
     },
     {
@@ -3240,7 +3240,7 @@
       "source_file": "app\\schemas\\documents.py",
       "source_location": "L1",
       "id": "app_schemas_documents_py",
-      "community": 4,
+      "community": 5,
       "norm_label": "documents.py"
     },
     {
@@ -3249,7 +3249,7 @@
       "source_file": "app\\schemas\\documents.py",
       "source_location": "L4",
       "id": "schemas_documents_documentingestionitem",
-      "community": 4,
+      "community": 5,
       "norm_label": "documentingestionitem"
     },
     {
@@ -3258,7 +3258,7 @@
       "source_file": "app\\schemas\\documents.py",
       "source_location": "L12",
       "id": "schemas_documents_documentingestionresponse",
-      "community": 4,
+      "community": 5,
       "norm_label": "documentingestionresponse"
     },
     {
@@ -3312,7 +3312,7 @@
       "source_file": "app\\schemas\\experiments.py",
       "source_location": "L1",
       "id": "app_schemas_experiments_py",
-      "community": 10,
+      "community": 9,
       "norm_label": "experiments.py"
     },
     {
@@ -3321,7 +3321,7 @@
       "source_file": "app\\schemas\\experiments.py",
       "source_location": "L4",
       "id": "schemas_experiments_experimentcreate",
-      "community": 10,
+      "community": 9,
       "norm_label": "experimentcreate"
     },
     {
@@ -3330,7 +3330,7 @@
       "source_file": "app\\schemas\\experiments.py",
       "source_location": "L10",
       "id": "schemas_experiments_experimentresponse",
-      "community": 10,
+      "community": 9,
       "norm_label": "experimentresponse"
     },
     {
@@ -3411,7 +3411,7 @@
       "source_file": "app\\schemas\\__init__.py",
       "source_location": "L1",
       "id": "app_schemas_init_py",
-      "community": 38,
+      "community": 37,
       "norm_label": "__init__.py"
     },
     {
@@ -3419,7 +3419,7 @@
       "file_type": "rationale",
       "source_file": "app\\schemas\\__init__.py",
       "source_location": "L1",
-      "community": 38,
+      "community": 37,
       "norm_label": "pydantic schemas for api contracts.",
       "id": "schemas_init_rationale_1"
     },
@@ -3429,7 +3429,7 @@
       "source_file": "app\\services\\benchmark_service.py",
       "source_location": "L1",
       "id": "app_services_benchmark_service_py",
-      "community": 5,
+      "community": 4,
       "norm_label": "benchmark_service.py"
     },
     {
@@ -3438,7 +3438,7 @@
       "source_file": "app\\services\\benchmark_service.py",
       "source_location": "L15",
       "id": "services_benchmark_service_benchmarkservice",
-      "community": 5,
+      "community": 4,
       "norm_label": "benchmarkservice"
     },
     {
@@ -3447,7 +3447,7 @@
       "source_file": "app\\services\\benchmark_service.py",
       "source_location": "L16",
       "id": "services_benchmark_service_benchmarkservice_init",
-      "community": 5,
+      "community": 4,
       "norm_label": ".__init__()"
     },
     {
@@ -3456,7 +3456,7 @@
       "source_file": "app\\services\\benchmark_service.py",
       "source_location": "L22",
       "id": "services_benchmark_service_benchmarkservice_run",
-      "community": 5,
+      "community": 4,
       "norm_label": ".run()"
     },
     {
@@ -3465,7 +3465,7 @@
       "source_file": "app\\services\\benchmark_service.py",
       "source_location": "L46",
       "id": "services_benchmark_service_best_metrics",
-      "community": 5,
+      "community": 4,
       "norm_label": "_best_metrics()"
     },
     {
@@ -3519,7 +3519,7 @@
       "source_file": "app\\services\\experiment_service.py",
       "source_location": "L1",
       "id": "app_services_experiment_service_py",
-      "community": 10,
+      "community": 9,
       "norm_label": "experiment_service.py"
     },
     {
@@ -3528,7 +3528,7 @@
       "source_file": "app\\services\\experiment_service.py",
       "source_location": "L12",
       "id": "services_experiment_service_experimentservice",
-      "community": 10,
+      "community": 9,
       "norm_label": "experimentservice"
     },
     {
@@ -3537,7 +3537,7 @@
       "source_file": "app\\services\\experiment_service.py",
       "source_location": "L13",
       "id": "services_experiment_service_experimentservice_init",
-      "community": 10,
+      "community": 9,
       "norm_label": ".__init__()"
     },
     {
@@ -3546,7 +3546,7 @@
       "source_file": "app\\services\\experiment_service.py",
       "source_location": "L17",
       "id": "services_experiment_service_experimentservice_list_experiments",
-      "community": 10,
+      "community": 9,
       "norm_label": ".list_experiments()"
     },
     {
@@ -3555,7 +3555,7 @@
       "source_file": "app\\services\\experiment_service.py",
       "source_location": "L24",
       "id": "services_experiment_service_experimentservice_create",
-      "community": 10,
+      "community": 9,
       "norm_label": ".create()"
     },
     {
@@ -3564,7 +3564,7 @@
       "source_file": "app\\services\\experiment_service.py",
       "source_location": "L35",
       "id": "services_experiment_service_to_response",
-      "community": 10,
+      "community": 9,
       "norm_label": "_to_response()"
     },
     {
@@ -3573,7 +3573,7 @@
       "source_file": "app\\services\\ingestion_service.py",
       "source_location": "L1",
       "id": "app_services_ingestion_service_py",
-      "community": 4,
+      "community": 5,
       "norm_label": "ingestion_service.py"
     },
     {
@@ -3582,7 +3582,7 @@
       "source_file": "app\\services\\ingestion_service.py",
       "source_location": "L22",
       "id": "services_ingestion_service_ingestionservice",
-      "community": 4,
+      "community": 5,
       "norm_label": "ingestionservice"
     },
     {
@@ -3591,7 +3591,7 @@
       "source_file": "app\\services\\ingestion_service.py",
       "source_location": "L23",
       "id": "services_ingestion_service_ingestionservice_init",
-      "community": 9,
+      "community": 10,
       "norm_label": ".__init__()"
     },
     {
@@ -3600,7 +3600,7 @@
       "source_file": "app\\services\\ingestion_service.py",
       "source_location": "L28",
       "id": "services_ingestion_service_ingestionservice_ingest_uploads",
-      "community": 4,
+      "community": 5,
       "norm_label": ".ingest_uploads()"
     },
     {
@@ -3609,7 +3609,7 @@
       "source_file": "app\\services\\ingestion_service.py",
       "source_location": "L42",
       "id": "services_ingestion_service_ingestionservice_ingest_one",
-      "community": 4,
+      "community": 5,
       "norm_label": "._ingest_one()"
     },
     {
@@ -3618,7 +3618,7 @@
       "source_file": "app\\services\\ingestion_service.py",
       "source_location": "L106",
       "id": "services_ingestion_service_ingestionservice_get_existing",
-      "community": 4,
+      "community": 5,
       "norm_label": "._get_existing()"
     },
     {
@@ -3690,7 +3690,7 @@
       "source_file": "app\\services\\__init__.py",
       "source_location": "L1",
       "id": "app_services_init_py",
-      "community": 39,
+      "community": 38,
       "norm_label": "__init__.py"
     },
     {
@@ -3698,7 +3698,7 @@
       "file_type": "rationale",
       "source_file": "app\\services\\__init__.py",
       "source_location": "L1",
-      "community": 39,
+      "community": 38,
       "norm_label": "application service layer.",
       "id": "services_init_rationale_1"
     },
@@ -3708,7 +3708,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L1",
       "id": "app_utils_cache_py",
-      "community": 12,
+      "community": 13,
       "norm_label": "cache.py"
     },
     {
@@ -3717,7 +3717,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L5",
       "id": "utils_cache_jsoncache",
-      "community": 12,
+      "community": 13,
       "norm_label": "jsoncache"
     },
     {
@@ -3726,7 +3726,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L6",
       "id": "utils_cache_jsoncache_init",
-      "community": 12,
+      "community": 13,
       "norm_label": ".__init__()"
     },
     {
@@ -3735,7 +3735,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L11",
       "id": "utils_cache_jsoncache_get",
-      "community": 12,
+      "community": 13,
       "norm_label": ".get()"
     },
     {
@@ -3744,7 +3744,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L15",
       "id": "utils_cache_jsoncache_set",
-      "community": 12,
+      "community": 13,
       "norm_label": ".set()"
     },
     {
@@ -3753,7 +3753,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L18",
       "id": "utils_cache_jsoncache_invalidate",
-      "community": 12,
+      "community": 13,
       "norm_label": ".invalidate()"
     },
     {
@@ -3762,7 +3762,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L23",
       "id": "utils_cache_redisjsoncache",
-      "community": 12,
+      "community": 13,
       "norm_label": "redisjsoncache"
     },
     {
@@ -3771,7 +3771,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L24",
       "id": "utils_cache_redisjsoncache_init",
-      "community": 12,
+      "community": 13,
       "norm_label": ".__init__()"
     },
     {
@@ -3780,7 +3780,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L28",
       "id": "utils_cache_redisjsoncache_redis",
-      "community": 12,
+      "community": 13,
       "norm_label": "._redis()"
     },
     {
@@ -3789,7 +3789,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L35",
       "id": "utils_cache_redisjsoncache_get",
-      "community": 12,
+      "community": 13,
       "norm_label": ".get()"
     },
     {
@@ -3798,7 +3798,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L40",
       "id": "utils_cache_redisjsoncache_set",
-      "community": 1,
+      "community": 2,
       "norm_label": ".set()"
     },
     {
@@ -3807,7 +3807,7 @@
       "source_file": "app\\utils\\cache.py",
       "source_location": "L44",
       "id": "utils_cache_redisjsoncache_invalidate",
-      "community": 12,
+      "community": 13,
       "norm_label": ".invalidate()"
     },
     {
@@ -3816,7 +3816,7 @@
       "source_file": "app\\utils\\__init__.py",
       "source_location": "L1",
       "id": "app_utils_init_py",
-      "community": 45,
+      "community": 44,
       "norm_label": "__init__.py"
     },
     {
@@ -3825,26 +3825,125 @@
       "source_file": "frontend\\main.js",
       "source_location": "L1",
       "id": "frontend_main_js",
-      "community": 22,
+      "community": 11,
       "norm_label": "main.js"
+    },
+    {
+      "label": "$()",
+      "file_type": "code",
+      "source_file": "frontend\\main.js",
+      "source_location": "L24",
+      "id": "frontend_main",
+      "community": 11,
+      "norm_label": "$()"
+    },
+    {
+      "label": "apiBase()",
+      "file_type": "code",
+      "source_file": "frontend\\main.js",
+      "source_location": "L26",
+      "id": "frontend_main_apibase",
+      "community": 11,
+      "norm_label": "apibase()"
+    },
+    {
+      "label": "request()",
+      "file_type": "code",
+      "source_file": "frontend\\main.js",
+      "source_location": "L30",
+      "id": "frontend_main_request",
+      "community": 11,
+      "norm_label": "request()"
+    },
+    {
+      "label": "setStatus()",
+      "file_type": "code",
+      "source_file": "frontend\\main.js",
+      "source_location": "L40",
+      "id": "frontend_main_setstatus",
+      "community": 11,
+      "norm_label": "setstatus()"
     },
     {
       "label": "loadSummary()",
       "file_type": "code",
       "source_file": "frontend\\main.js",
-      "source_location": "L25",
+      "source_location": "L46",
       "id": "frontend_main_loadsummary",
-      "community": 22,
+      "community": 11,
       "norm_label": "loadsummary()"
     },
     {
-      "label": "render()",
+      "label": "renderSummary()",
       "file_type": "code",
       "source_file": "frontend\\main.js",
-      "source_location": "L43",
-      "id": "frontend_main_render",
-      "community": 22,
-      "norm_label": "render()"
+      "source_location": "L66",
+      "id": "frontend_main_rendersummary",
+      "community": 11,
+      "norm_label": "rendersummary()"
+    },
+    {
+      "label": "renderLeaderboard()",
+      "file_type": "code",
+      "source_file": "frontend\\main.js",
+      "source_location": "L76",
+      "id": "frontend_main_renderleaderboard",
+      "community": 11,
+      "norm_label": "renderleaderboard()"
+    },
+    {
+      "label": "uploadDocuments()",
+      "file_type": "code",
+      "source_file": "frontend\\main.js",
+      "source_location": "L90",
+      "id": "frontend_main_uploaddocuments",
+      "community": 11,
+      "norm_label": "uploaddocuments()"
+    },
+    {
+      "label": "runQuery()",
+      "file_type": "code",
+      "source_file": "frontend\\main.js",
+      "source_location": "L118",
+      "id": "frontend_main_runquery",
+      "community": 11,
+      "norm_label": "runquery()"
+    },
+    {
+      "label": "renderSources()",
+      "file_type": "code",
+      "source_file": "frontend\\main.js",
+      "source_location": "L150",
+      "id": "frontend_main_rendersources",
+      "community": 11,
+      "norm_label": "rendersources()"
+    },
+    {
+      "label": "evaluateAnswer()",
+      "file_type": "code",
+      "source_file": "frontend\\main.js",
+      "source_location": "L161",
+      "id": "frontend_main_evaluateanswer",
+      "community": 11,
+      "norm_label": "evaluateanswer()"
+    },
+    {
+      "label": "runBenchmark()",
+      "file_type": "code",
+      "source_file": "frontend\\main.js",
+      "source_location": "L201",
+      "id": "frontend_main_runbenchmark",
+      "community": 11,
+      "norm_label": "runbenchmark()"
+    },
+    {
+      "label": "escapeHtml()",
+      "file_type": "code",
+      "source_file": "frontend\\main.js",
+      "source_location": "L228",
+      "id": "frontend_main_escapehtml",
+      "community": 11,
+      "norm_label": "escapehtml()"
     },
     {
       "label": "seed_sample_data.py",
@@ -3852,7 +3951,7 @@
       "source_file": "scripts\\seed_sample_data.py",
       "source_location": "L1",
       "id": "scripts_seed_sample_data_py",
-      "community": 40,
+      "community": 39,
       "norm_label": "seed_sample_data.py"
     },
     {
@@ -3861,7 +3960,7 @@
       "source_file": "scripts\\seed_sample_data.py",
       "source_location": "L4",
       "id": "scripts_seed_sample_data_main",
-      "community": 40,
+      "community": 39,
       "norm_label": "main()"
     },
     {
@@ -3933,7 +4032,7 @@
       "source_file": "tests\\conftest.py",
       "source_location": "L1",
       "id": "tests_conftest_py",
-      "community": 41,
+      "community": 40,
       "norm_label": "conftest.py"
     },
     {
@@ -3942,7 +4041,7 @@
       "source_file": "tests\\conftest.py",
       "source_location": "L7",
       "id": "tests_conftest_clear_settings_cache",
-      "community": 41,
+      "community": 40,
       "norm_label": "clear_settings_cache()"
     },
     {
@@ -3951,7 +4050,7 @@
       "source_file": "tests\\integration\\test_api_health.py",
       "source_location": "L1",
       "id": "tests_integration_test_api_health_py",
-      "community": 11,
+      "community": 12,
       "norm_label": "test_api_health.py"
     },
     {
@@ -3960,7 +4059,7 @@
       "source_file": "tests\\integration\\test_api_health.py",
       "source_location": "L6",
       "id": "integration_test_api_health_test_health_endpoint",
-      "community": 11,
+      "community": 12,
       "norm_label": "test_health_endpoint()"
     },
     {
@@ -3969,7 +4068,7 @@
       "source_file": "tests\\integration\\test_api_registry_observability.py",
       "source_location": "L1",
       "id": "tests_integration_test_api_registry_observability_py",
-      "community": 11,
+      "community": 12,
       "norm_label": "test_api_registry_observability.py"
     },
     {
@@ -3978,7 +4077,7 @@
       "source_file": "tests\\integration\\test_api_registry_observability.py",
       "source_location": "L6",
       "id": "integration_test_api_registry_observability_test_registry_and_observability_endpoints",
-      "community": 11,
+      "community": 12,
       "norm_label": "test_registry_and_observability_endpoints()"
     },
     {
@@ -3996,7 +4095,7 @@
       "source_file": "tests\\unit\\test_benchmarking.py",
       "source_location": "L10",
       "id": "unit_test_benchmarking_test_benchmark_runner_returns_ranked_rows",
-      "community": 5,
+      "community": 4,
       "norm_label": "test_benchmark_runner_returns_ranked_rows()"
     },
     {
@@ -4023,7 +4122,7 @@
       "source_file": "tests\\unit\\test_chunking.py",
       "source_location": "L1",
       "id": "tests_unit_test_chunking_py",
-      "community": 4,
+      "community": 5,
       "norm_label": "test_chunking.py"
     },
     {
@@ -4032,7 +4131,7 @@
       "source_file": "tests\\unit\\test_chunking.py",
       "source_location": "L4",
       "id": "unit_test_chunking_test_recursive_chunker_creates_metadata",
-      "community": 4,
+      "community": 5,
       "norm_label": "test_recursive_chunker_creates_metadata()"
     },
     {
@@ -4041,7 +4140,7 @@
       "source_file": "tests\\unit\\test_embedding_vector_pipeline.py",
       "source_location": "L1",
       "id": "tests_unit_test_embedding_vector_pipeline_py",
-      "community": 4,
+      "community": 5,
       "norm_label": "test_embedding_vector_pipeline.py"
     },
     {
@@ -4050,7 +4149,7 @@
       "source_file": "tests\\unit\\test_embedding_vector_pipeline.py",
       "source_location": "L10",
       "id": "unit_test_embedding_vector_pipeline_test_cached_embeddings_and_vector_search_round_trip",
-      "community": 2,
+      "community": 1,
       "norm_label": "test_cached_embeddings_and_vector_search_round_trip()"
     },
     {
@@ -4059,7 +4158,7 @@
       "source_file": "tests\\unit\\test_embedding_vector_pipeline.py",
       "source_location": "L27",
       "id": "unit_test_embedding_vector_pipeline_test_document_and_chunk_hashes_are_stable",
-      "community": 4,
+      "community": 5,
       "norm_label": "test_document_and_chunk_hashes_are_stable()"
     },
     {
@@ -4068,7 +4167,7 @@
       "source_file": "tests\\unit\\test_evaluation_engine.py",
       "source_location": "L1",
       "id": "tests_unit_test_evaluation_engine_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "test_evaluation_engine.py"
     },
     {
@@ -4077,7 +4176,7 @@
       "source_file": "tests\\unit\\test_evaluation_engine.py",
       "source_location": "L8",
       "id": "unit_test_evaluation_engine_test_evaluation_engine_aggregates_quality_and_performance",
-      "community": 1,
+      "community": 2,
       "norm_label": "test_evaluation_engine_aggregates_quality_and_performance()"
     },
     {
@@ -4086,7 +4185,7 @@
       "source_file": "tests\\unit\\test_generation_metrics.py",
       "source_location": "L1",
       "id": "tests_unit_test_generation_metrics_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "test_generation_metrics.py"
     },
     {
@@ -4095,7 +4194,7 @@
       "source_file": "tests\\unit\\test_generation_metrics.py",
       "source_location": "L10",
       "id": "unit_test_generation_metrics_test_generation_metrics_reward_grounded_answers",
-      "community": 1,
+      "community": 2,
       "norm_label": "test_generation_metrics_reward_grounded_answers()"
     },
     {
@@ -4104,7 +4203,7 @@
       "source_file": "tests\\unit\\test_hallucination.py",
       "source_location": "L1",
       "id": "tests_unit_test_hallucination_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "test_hallucination.py"
     },
     {
@@ -4113,7 +4212,7 @@
       "source_file": "tests\\unit\\test_hallucination.py",
       "source_location": "L8",
       "id": "unit_test_hallucination_test_hallucination_detector_flags_unsupported_claims",
-      "community": 1,
+      "community": 2,
       "norm_label": "test_hallucination_detector_flags_unsupported_claims()"
     },
     {
@@ -4122,7 +4221,7 @@
       "source_file": "tests\\unit\\test_hallucination.py",
       "source_location": "L20",
       "id": "unit_test_hallucination_test_hallucination_detector_validates_citations",
-      "community": 1,
+      "community": 2,
       "norm_label": "test_hallucination_detector_validates_citations()"
     },
     {
@@ -4149,7 +4248,7 @@
       "source_file": "tests\\unit\\test_retrieval_metrics.py",
       "source_location": "L1",
       "id": "tests_unit_test_retrieval_metrics_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "test_retrieval_metrics.py"
     },
     {
@@ -4158,7 +4257,7 @@
       "source_file": "tests\\unit\\test_retrieval_metrics.py",
       "source_location": "L5",
       "id": "unit_test_retrieval_metrics_test_retrieval_metrics_score_ranked_results",
-      "community": 1,
+      "community": 2,
       "norm_label": "test_retrieval_metrics_score_ranked_results()"
     },
     {
@@ -4167,7 +4266,7 @@
       "source_file": "tests\\unit\\test_retrieval_pipeline.py",
       "source_location": "L1",
       "id": "tests_unit_test_retrieval_pipeline_py",
-      "community": 2,
+      "community": 0,
       "norm_label": "test_retrieval_pipeline.py"
     },
     {
@@ -4176,7 +4275,7 @@
       "source_file": "tests\\unit\\test_retrieval_pipeline.py",
       "source_location": "L9",
       "id": "unit_test_retrieval_pipeline_test_reciprocal_rank_fusion_merges_rankings",
-      "community": 2,
+      "community": 0,
       "norm_label": "test_reciprocal_rank_fusion_merges_rankings()"
     },
     {
@@ -4185,7 +4284,7 @@
       "source_file": "tests\\unit\\test_retrieval_pipeline.py",
       "source_location": "L20",
       "id": "unit_test_retrieval_pipeline_test_bm25_retriever_prefers_matching_document",
-      "community": 2,
+      "community": 0,
       "norm_label": "test_bm25_retriever_prefers_matching_document()"
     },
     {
@@ -4203,7 +4302,7 @@
       "source_file": "tests\\unit\\test_retrieval_pipeline.py",
       "source_location": "L43",
       "id": "unit_test_retrieval_pipeline_test_keyword_overlap_reranker_promotes_query_overlap",
-      "community": 2,
+      "community": 1,
       "norm_label": "test_keyword_overlap_reranker_promotes_query_overlap()"
     },
     {
@@ -4238,7 +4337,7 @@
       "file_type": "rationale",
       "source_file": "app\\rag\\vectorstores.py",
       "source_location": "L58",
-      "community": 2,
+      "community": 1,
       "norm_label": "faiss-backed store when faiss-cpu is installed, with in-memory behavior as fallb",
       "id": "rag_vectorstores_rationale_58"
     },
@@ -4247,7 +4346,7 @@
       "file_type": "rationale",
       "source_file": "app\\rag\\document_loaders.py",
       "source_location": "L44",
-      "community": 46,
+      "community": 45,
       "norm_label": "placeholder seam for tesseract, azure ocr, or layout-aware enterprise ocr.",
       "id": "rag_document_loaders_rationale_44"
     },
@@ -4256,7 +4355,7 @@
       "file_type": "rationale",
       "source_file": "app\\rag\\embeddings.py",
       "source_location": "L20",
-      "community": 47,
+      "community": 46,
       "norm_label": "deterministic local fallback used for tests and offline development.",
       "id": "rag_embeddings_rationale_20"
     }
@@ -5432,11 +5531,11 @@
       "source_file": "app\\rag\\generation.py",
       "source_location": "L8",
       "weight": 0.8,
-      "_src": "rag_generation_llmprovider",
-      "_tgt": "core_exceptions_apperror",
+      "_src": "core_exceptions_apperror",
+      "_tgt": "rag_generation_llmprovider",
+      "confidence_score": 0.5,
       "source": "core_exceptions_apperror",
-      "target": "rag_generation_llmprovider",
-      "confidence_score": 0.5
+      "target": "rag_generation_llmprovider"
     },
     {
       "relation": "uses",
@@ -5444,11 +5543,11 @@
       "source_file": "app\\rag\\generation.py",
       "source_location": "L8",
       "weight": 0.8,
-      "_src": "rag_generation_mockgroundedllm",
-      "_tgt": "core_exceptions_apperror",
+      "_src": "core_exceptions_apperror",
+      "_tgt": "rag_generation_mockgroundedllm",
+      "confidence_score": 0.5,
       "source": "core_exceptions_apperror",
-      "target": "rag_generation_mockgroundedllm",
-      "confidence_score": 0.5
+      "target": "rag_generation_mockgroundedllm"
     },
     {
       "relation": "uses",
@@ -5456,11 +5555,11 @@
       "source_file": "app\\rag\\generation.py",
       "source_location": "L8",
       "weight": 0.8,
-      "_src": "rag_generation_openaillm",
-      "_tgt": "core_exceptions_apperror",
+      "_src": "core_exceptions_apperror",
+      "_tgt": "rag_generation_openaillm",
+      "confidence_score": 0.5,
       "source": "core_exceptions_apperror",
-      "target": "rag_generation_openaillm",
-      "confidence_score": 0.5
+      "target": "rag_generation_openaillm"
     },
     {
       "relation": "uses",
@@ -5468,11 +5567,11 @@
       "source_file": "app\\rag\\generation.py",
       "source_location": "L8",
       "weight": 0.8,
-      "_src": "rag_generation_groqllm",
-      "_tgt": "core_exceptions_apperror",
+      "_src": "core_exceptions_apperror",
+      "_tgt": "rag_generation_groqllm",
+      "confidence_score": 0.5,
       "source": "core_exceptions_apperror",
-      "target": "rag_generation_groqllm",
-      "confidence_score": 0.5
+      "target": "rag_generation_groqllm"
     },
     {
       "relation": "uses",
@@ -5480,11 +5579,11 @@
       "source_file": "app\\rag\\generation.py",
       "source_location": "L8",
       "weight": 0.8,
-      "_src": "rag_generation_geminillm",
-      "_tgt": "core_exceptions_apperror",
+      "_src": "core_exceptions_apperror",
+      "_tgt": "rag_generation_geminillm",
+      "confidence_score": 0.5,
       "source": "core_exceptions_apperror",
-      "target": "rag_generation_geminillm",
-      "confidence_score": 0.5
+      "target": "rag_generation_geminillm"
     },
     {
       "relation": "calls",
@@ -5493,8 +5592,8 @@
       "source_file": "app\\rag\\generation.py",
       "source_location": "L78",
       "weight": 1.0,
-      "_src": "rag_generation_geminillm_generate",
-      "_tgt": "core_exceptions_apperror",
+      "_src": "core_exceptions_apperror",
+      "_tgt": "rag_generation_geminillm_generate",
       "source": "core_exceptions_apperror",
       "target": "rag_generation_geminillm_generate"
     },
@@ -9105,8 +9204,8 @@
       "source_file": "app\\rag\\generation.py",
       "source_location": "L114",
       "weight": 1.0,
-      "_src": "rag_generation_geminillm_generate",
-      "_tgt": "models_rag_generationresult",
+      "_src": "models_rag_generationresult",
+      "_tgt": "rag_generation_geminillm_generate",
       "source": "models_rag_generationresult",
       "target": "rag_generation_geminillm_generate"
     },
@@ -11049,8 +11148,8 @@
       "source_file": "app\\rag\\llm_factory.py",
       "source_location": "L12",
       "weight": 1.0,
-      "_src": "rag_llm_factory_build_llm_provider",
-      "_tgt": "rag_generation_mockgroundedllm",
+      "_src": "rag_generation_mockgroundedllm",
+      "_tgt": "rag_llm_factory_build_llm_provider",
       "source": "rag_generation_mockgroundedllm",
       "target": "rag_llm_factory_build_llm_provider"
     },
@@ -11097,8 +11196,8 @@
       "source_file": "app\\rag\\llm_factory.py",
       "source_location": "L9",
       "weight": 1.0,
-      "_src": "rag_llm_factory_build_llm_provider",
-      "_tgt": "rag_generation_openaillm",
+      "_src": "rag_generation_openaillm",
+      "_tgt": "rag_llm_factory_build_llm_provider",
       "source": "rag_generation_openaillm",
       "target": "rag_llm_factory_build_llm_provider"
     },
@@ -11121,8 +11220,8 @@
       "source_file": "app\\rag\\llm_factory.py",
       "source_location": "L11",
       "weight": 1.0,
-      "_src": "rag_llm_factory_build_llm_provider",
-      "_tgt": "rag_generation_groqllm",
+      "_src": "rag_generation_groqllm",
+      "_tgt": "rag_llm_factory_build_llm_provider",
       "source": "rag_generation_groqllm",
       "target": "rag_llm_factory_build_llm_provider"
     },
@@ -11157,8 +11256,8 @@
       "source_file": "app\\rag\\llm_factory.py",
       "source_location": "L7",
       "weight": 1.0,
-      "_src": "rag_llm_factory_build_llm_provider",
-      "_tgt": "rag_generation_geminillm",
+      "_src": "rag_generation_geminillm",
+      "_tgt": "rag_llm_factory_build_llm_provider",
       "source": "rag_generation_geminillm",
       "target": "rag_llm_factory_build_llm_provider"
     },
@@ -11205,8 +11304,8 @@
       "source_file": "app\\services\\rag_service.py",
       "source_location": "L29",
       "weight": 1.0,
-      "_src": "services_rag_service_ragservice_init",
-      "_tgt": "rag_llm_factory_build_llm_provider",
+      "_src": "rag_llm_factory_build_llm_provider",
+      "_tgt": "services_rag_service_ragservice_init",
       "source": "rag_llm_factory_build_llm_provider",
       "target": "services_rag_service_ragservice_init"
     },
@@ -14826,7 +14925,55 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend\\main.js",
-      "source_location": "L25",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "frontend_main_js",
+      "_tgt": "frontend_main",
+      "source": "frontend_main_js",
+      "target": "frontend_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "frontend_main_js",
+      "_tgt": "frontend_main_apibase",
+      "source": "frontend_main_js",
+      "target": "frontend_main_apibase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_src": "frontend_main_js",
+      "_tgt": "frontend_main_request",
+      "source": "frontend_main_js",
+      "target": "frontend_main_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_src": "frontend_main_js",
+      "_tgt": "frontend_main_setstatus",
+      "source": "frontend_main_js",
+      "target": "frontend_main_setstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L46",
       "weight": 1.0,
       "_src": "frontend_main_js",
       "_tgt": "frontend_main_loadsummary",
@@ -14838,24 +14985,420 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend\\main.js",
-      "source_location": "L43",
+      "source_location": "L66",
       "weight": 1.0,
       "_src": "frontend_main_js",
-      "_tgt": "frontend_main_render",
+      "_tgt": "frontend_main_rendersummary",
       "source": "frontend_main_js",
-      "target": "frontend_main_render",
+      "target": "frontend_main_rendersummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_src": "frontend_main_js",
+      "_tgt": "frontend_main_renderleaderboard",
+      "source": "frontend_main_js",
+      "target": "frontend_main_renderleaderboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_src": "frontend_main_js",
+      "_tgt": "frontend_main_uploaddocuments",
+      "source": "frontend_main_js",
+      "target": "frontend_main_uploaddocuments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L118",
+      "weight": 1.0,
+      "_src": "frontend_main_js",
+      "_tgt": "frontend_main_runquery",
+      "source": "frontend_main_js",
+      "target": "frontend_main_runquery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L150",
+      "weight": 1.0,
+      "_src": "frontend_main_js",
+      "_tgt": "frontend_main_rendersources",
+      "source": "frontend_main_js",
+      "target": "frontend_main_rendersources",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L161",
+      "weight": 1.0,
+      "_src": "frontend_main_js",
+      "_tgt": "frontend_main_evaluateanswer",
+      "source": "frontend_main_js",
+      "target": "frontend_main_evaluateanswer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L201",
+      "weight": 1.0,
+      "_src": "frontend_main_js",
+      "_tgt": "frontend_main_runbenchmark",
+      "source": "frontend_main_js",
+      "target": "frontend_main_runbenchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L228",
+      "weight": 1.0,
+      "_src": "frontend_main_js",
+      "_tgt": "frontend_main_escapehtml",
+      "source": "frontend_main_js",
+      "target": "frontend_main_escapehtml",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend\\main.js",
-      "source_location": "L44",
+      "source_location": "L27",
       "weight": 1.0,
-      "_src": "frontend_main_render",
+      "_src": "frontend_main_apibase",
+      "_tgt": "frontend_main",
+      "source": "frontend_main",
+      "target": "frontend_main_apibase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_src": "frontend_main_setstatus",
+      "_tgt": "frontend_main",
+      "source": "frontend_main",
+      "target": "frontend_main_setstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_src": "frontend_main_rendersummary",
+      "_tgt": "frontend_main",
+      "source": "frontend_main",
+      "target": "frontend_main_rendersummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_src": "frontend_main_renderleaderboard",
+      "_tgt": "frontend_main",
+      "source": "frontend_main",
+      "target": "frontend_main_renderleaderboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_src": "frontend_main_uploaddocuments",
+      "_tgt": "frontend_main",
+      "source": "frontend_main",
+      "target": "frontend_main_uploaddocuments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_src": "frontend_main_runquery",
+      "_tgt": "frontend_main",
+      "source": "frontend_main",
+      "target": "frontend_main_runquery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L151",
+      "weight": 1.0,
+      "_src": "frontend_main_rendersources",
+      "_tgt": "frontend_main",
+      "source": "frontend_main",
+      "target": "frontend_main_rendersources",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L168",
+      "weight": 1.0,
+      "_src": "frontend_main_evaluateanswer",
+      "_tgt": "frontend_main",
+      "source": "frontend_main",
+      "target": "frontend_main_evaluateanswer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L203",
+      "weight": 1.0,
+      "_src": "frontend_main_runbenchmark",
+      "_tgt": "frontend_main",
+      "source": "frontend_main",
+      "target": "frontend_main_runbenchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_src": "frontend_main_request",
+      "_tgt": "frontend_main_apibase",
+      "source": "frontend_main_apibase",
+      "target": "frontend_main_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_src": "frontend_main_loadsummary",
+      "_tgt": "frontend_main_request",
+      "source": "frontend_main_request",
+      "target": "frontend_main_loadsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L103",
+      "weight": 1.0,
+      "_src": "frontend_main_uploaddocuments",
+      "_tgt": "frontend_main_request",
+      "source": "frontend_main_request",
+      "target": "frontend_main_uploaddocuments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L133",
+      "weight": 1.0,
+      "_src": "frontend_main_runquery",
+      "_tgt": "frontend_main_request",
+      "source": "frontend_main_request",
+      "target": "frontend_main_runquery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L181",
+      "weight": 1.0,
+      "_src": "frontend_main_evaluateanswer",
+      "_tgt": "frontend_main_request",
+      "source": "frontend_main_request",
+      "target": "frontend_main_evaluateanswer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L215",
+      "weight": 1.0,
+      "_src": "frontend_main_runbenchmark",
+      "_tgt": "frontend_main_request",
+      "source": "frontend_main_request",
+      "target": "frontend_main_runbenchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_src": "frontend_main_loadsummary",
+      "_tgt": "frontend_main_setstatus",
+      "source": "frontend_main_setstatus",
+      "target": "frontend_main_loadsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_src": "frontend_main_uploaddocuments",
+      "_tgt": "frontend_main_setstatus",
+      "source": "frontend_main_setstatus",
+      "target": "frontend_main_uploaddocuments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L128",
+      "weight": 1.0,
+      "_src": "frontend_main_runquery",
+      "_tgt": "frontend_main_setstatus",
+      "source": "frontend_main_setstatus",
+      "target": "frontend_main_runquery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L164",
+      "weight": 1.0,
+      "_src": "frontend_main_evaluateanswer",
+      "_tgt": "frontend_main_setstatus",
+      "source": "frontend_main_setstatus",
+      "target": "frontend_main_evaluateanswer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L213",
+      "weight": 1.0,
+      "_src": "frontend_main_runbenchmark",
+      "_tgt": "frontend_main_setstatus",
+      "source": "frontend_main_setstatus",
+      "target": "frontend_main_runbenchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_src": "frontend_main_rendersummary",
       "_tgt": "frontend_main_loadsummary",
       "source": "frontend_main_loadsummary",
-      "target": "frontend_main_render",
+      "target": "frontend_main_rendersummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_src": "frontend_main_rendersummary",
+      "_tgt": "frontend_main_renderleaderboard",
+      "source": "frontend_main_rendersummary",
+      "target": "frontend_main_renderleaderboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L144",
+      "weight": 1.0,
+      "_src": "frontend_main_runquery",
+      "_tgt": "frontend_main_rendersummary",
+      "source": "frontend_main_rendersummary",
+      "target": "frontend_main_runquery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L195",
+      "weight": 1.0,
+      "_src": "frontend_main_evaluateanswer",
+      "_tgt": "frontend_main_rendersummary",
+      "source": "frontend_main_rendersummary",
+      "target": "frontend_main_evaluateanswer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L222",
+      "weight": 1.0,
+      "_src": "frontend_main_runbenchmark",
+      "_tgt": "frontend_main_rendersummary",
+      "source": "frontend_main_rendersummary",
+      "target": "frontend_main_runbenchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L221",
+      "weight": 1.0,
+      "_src": "frontend_main_runbenchmark",
+      "_tgt": "frontend_main_renderleaderboard",
+      "source": "frontend_main_renderleaderboard",
+      "target": "frontend_main_runbenchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\main.js",
+      "source_location": "L143",
+      "weight": 1.0,
+      "_src": "frontend_main_runquery",
+      "_tgt": "frontend_main_rendersources",
+      "source": "frontend_main_runquery",
+      "target": "frontend_main_rendersources",
       "confidence_score": 1.0
     },
     {
