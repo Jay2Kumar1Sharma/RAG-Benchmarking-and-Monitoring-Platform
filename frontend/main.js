@@ -19,23 +19,25 @@ const state = {
   lastQuestion: "",
   lastAnswer: "",
   lastSources: [],
+  summaryRetryTimer: null,
 };
 
 const $ = (selector) => document.querySelector(selector);
 const config = window.RAG_PLATFORM_CONFIG || {};
 const defaultApiBaseUrl = config.apiBaseUrl || "http://localhost:8000";
+const apiReconnectMs = Number(config.apiReconnectMs || 5000);
 
 function apiBase() {
   return $("#api-base").value.replace(/\/$/, "");
 }
 
 async function request(path, options = {}) {
-  const timeoutMs = options.timeoutMs || 15000;
+  const { timeoutMs = 15000, ...fetchOptions } = options;
   const controller = new AbortController();
   const timeout = window.setTimeout(() => controller.abort(), timeoutMs);
   try {
     const response = await fetch(`${apiBase()}${path}`, {
-      ...options,
+      ...fetchOptions,
       signal: controller.signal,
     });
     const text = await response.text();
@@ -54,6 +56,16 @@ async function request(path, options = {}) {
   }
 }
 
+function scheduleSummaryRetry() {
+  window.clearTimeout(state.summaryRetryTimer);
+  state.summaryRetryTimer = window.setTimeout(renderSummary, apiReconnectMs);
+}
+
+function clearSummaryRetry() {
+  window.clearTimeout(state.summaryRetryTimer);
+  state.summaryRetryTimer = null;
+}
+
 function setStatus(selector, text, tone = "neutral") {
   const node = $(selector);
   node.textContent = text;
@@ -61,16 +73,18 @@ function setStatus(selector, text, tone = "neutral") {
 }
 
 async function loadSummary() {
-  setStatus("#api-status", "checking", "neutral");
+  setStatus("#api-status", "connecting", "neutral");
   try {
     const [health, summary] = await Promise.all([
       request("/api/v1/health", { timeoutMs: 8000 }),
       request("/api/v1/observability/summary", { timeoutMs: 12000 }),
     ]);
+    clearSummaryRetry();
     setStatus("#api-status", health.status, "good");
     return summary;
   } catch {
-    setStatus("#api-status", "offline", "bad");
+    setStatus("#api-status", "connecting", "neutral");
+    scheduleSummaryRetry();
     return {
       p95_latency_ms: 248,
       hallucination_rate: 0.084,
