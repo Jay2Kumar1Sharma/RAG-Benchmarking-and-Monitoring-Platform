@@ -1,20 +1,3 @@
-const sampleRows = [
-  {
-    retriever: "hybrid",
-    reranker: "keyword_overlap",
-    quality_score: 0.86,
-    hallucination_rate: 0.08,
-    p95_latency_ms: 248,
-  },
-  {
-    retriever: "dense",
-    reranker: "identity",
-    quality_score: 0.66,
-    hallucination_rate: 0.13,
-    p95_latency_ms: 210,
-  },
-];
-
 const state = {
   lastQuestion: "",
   lastAnswer: "",
@@ -72,8 +55,17 @@ function setStatus(selector, text, tone = "neutral") {
   node.dataset.tone = tone;
 }
 
+function setMetricsPending() {
+  $("#latency").textContent = "--";
+  $("#hallucination").textContent = "--";
+  $("#retrieval").textContent = "--";
+  $("#tokens").textContent = "--";
+  renderLeaderboard([]);
+}
+
 async function loadSummary() {
-  setStatus("#api-status", "connecting", "neutral");
+  setStatus("#api-status", "connecting", "loading");
+  setMetricsPending();
   try {
     const [health, summary] = await Promise.all([
       request("/api/v1/health", { timeoutMs: 8000 }),
@@ -83,21 +75,18 @@ async function loadSummary() {
     setStatus("#api-status", health.status, "good");
     return summary;
   } catch {
-    setStatus("#api-status", "connecting", "neutral");
+    setStatus("#api-status", "connecting", "loading");
     scheduleSummaryRetry();
-    return {
-      p95_latency_ms: 248,
-      hallucination_rate: 0.084,
-      retrieval_quality: 0.86,
-      token_usage: 12800,
-      benchmark_leaderboard: sampleRows,
-    };
+    return null;
   }
 }
 
 async function renderSummary() {
   const summary = await loadSummary();
-  const rows = summary.benchmark_leaderboard.length ? summary.benchmark_leaderboard : sampleRows;
+  if (!summary) {
+    return;
+  }
+  const rows = summary.benchmark_leaderboard || [];
   $("#latency").textContent = `${Math.round(summary.p95_latency_ms)} ms`;
   $("#hallucination").textContent = `${(summary.hallucination_rate * 100).toFixed(1)}%`;
   $("#retrieval").textContent = Number(summary.retrieval_quality).toFixed(2);
@@ -106,6 +95,10 @@ async function renderSummary() {
 }
 
 function renderLeaderboard(rows) {
+  if (!rows.length) {
+    $("#leaderboard").innerHTML = `<tr><td colspan="5">--</td></tr>`;
+    return;
+  }
   $("#leaderboard").innerHTML = rows
     .map(
       (row) => `<tr>
