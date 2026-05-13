@@ -56,15 +56,11 @@ h2 {
   text-transform: uppercase;
 }
 
-.api-control {
-  align-items: end;
-  display: grid;
+.header-actions {
+  align-items: center;
+  display: flex;
   gap: 8px;
-  grid-template-columns: minmax(260px, 420px) auto;
-}
-
-.api-control label {
-  grid-column: 1 / -1;
+  justify-content: flex-end;
 }
 
 button,
@@ -332,9 +328,8 @@ td {
 
 @media (max-width: 860px) {
   .topbar,
-  .api-control {
+  .header-actions {
     align-items: stretch;
-    grid-template-columns: 1fr;
   }
 
   .topbar {

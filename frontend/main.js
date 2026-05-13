@@ -11,7 +11,7 @@ const defaultApiBaseUrl = config.apiBaseUrl || "http://localhost:8000";
 const apiReconnectMs = Number(config.apiReconnectMs || 5000);
 
 function apiBase() {
-  return $("#api-base").value.replace(/\/$/, "");
+  return defaultApiBaseUrl.replace(/\/$/, "");
 }
 
 async function request(path, options = {}) {
@@ -264,5 +264,4 @@ $("#upload-form").addEventListener("submit", uploadDocuments);
 $("#query-form").addEventListener("submit", runQuery);
 $("#evaluate-form").addEventListener("submit", evaluateAnswer);
 $("#benchmark-form").addEventListener("submit", runBenchmark);
-$("#api-base").value = defaultApiBaseUrl;
 renderSummary();
