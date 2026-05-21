@@ -9,6 +9,7 @@ const $ = (selector) => document.querySelector(selector);
 const config = window.RAG_PLATFORM_CONFIG || {};
 const defaultApiBaseUrl = config.apiBaseUrl || "http://localhost:8000";
 const apiReconnectMs = Number(config.apiReconnectMs || 5000);
+const uploadTimeoutMs = Number(config.uploadTimeoutMs || 120000);
 
 function apiBase() {
   return defaultApiBaseUrl.replace(/\/$/, "");
@@ -33,10 +34,36 @@ async function request(path, options = {}) {
     if (error.name === "AbortError") {
       throw new Error("Request timed out");
     }
+    if (error instanceof TypeError && error.message === "Failed to fetch") {
+      throw new Error("Backend is connecting. Please try again shortly.");
+    }
     throw error;
   } finally {
     window.clearTimeout(timeout);
   }
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => {
+    window.setTimeout(resolve, ms);
+  });
+}
+
+async function waitForApiReady(statusSelector, maxAttempts = 18) {
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    setStatus("#api-status", "connecting", "loading");
+    setStatus(statusSelector, "Connecting to backend", "neutral");
+    try {
+      const health = await request("/api/v1/health", { timeoutMs: 8000 });
+      clearSummaryRetry();
+      setStatus("#api-status", health.status, "good");
+      return;
+    } catch {
+      scheduleSummaryRetry();
+      await sleep(apiReconnectMs);
+    }
+  }
+  throw new Error("Backend is still starting. Please retry in a moment.");
 }
 
 function scheduleSummaryRetry() {
@@ -123,12 +150,13 @@ async function uploadDocuments(event) {
   for (const file of files) {
     form.append("files", file);
   }
-  setStatus("#upload-status", "Uploading", "neutral");
   try {
+    await waitForApiReady("#upload-status");
+    setStatus("#upload-status", "Uploading", "neutral");
     const result = await request("/api/v1/upload-documents", {
       method: "POST",
       body: form,
-      timeoutMs: 120000,
+      timeoutMs: uploadTimeoutMs,
     });
     setStatus("#upload-status", `${result.total_chunks} chunks`, "good");
     $("#upload-results").innerHTML = result.documents
