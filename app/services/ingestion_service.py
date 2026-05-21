@@ -1,5 +1,6 @@
+from uuid import uuid4
+
 from fastapi import UploadFile
-from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import get_settings
@@ -34,7 +35,7 @@ class IngestionService:
             total_chunks += item.chunks_created
         try:
             await self.session.commit()
-        except SQLAlchemyError as exc:
+        except Exception as exc:
             await self.session.rollback()
             logger.warning("database_persistence_skipped", error=str(exc))
         return DocumentIngestionResponse(documents=items, total_chunks=total_chunks)
@@ -55,6 +56,7 @@ class IngestionService:
             )
 
         document = Document(
+            id=str(uuid4()),
             filename=file.filename or "document",
             content_hash=document_hash,
             mime_type=file.content_type,
@@ -62,7 +64,8 @@ class IngestionService:
         )
         try:
             await self.repository.add(document)
-        except SQLAlchemyError as exc:
+        except Exception as exc:
+            await self.session.rollback()
             logger.warning("document_db_add_skipped", error=str(exc))
         chunker = build_chunker(
             ChunkingConfig(
@@ -106,5 +109,7 @@ class IngestionService:
     async def _get_existing(self, content_hash: str) -> Document | None:
         try:
             return await self.repository.get_by_hash(content_hash)
-        except SQLAlchemyError:
+        except Exception as exc:
+            await self.session.rollback()
+            logger.warning("duplicate_lookup_skipped", error=str(exc))
             return None
