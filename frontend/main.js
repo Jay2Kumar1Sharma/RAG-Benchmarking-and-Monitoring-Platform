@@ -125,7 +125,11 @@ async function uploadDocuments(event) {
   }
   setStatus("#upload-status", "Uploading", "neutral");
   try {
-    const result = await request("/api/v1/upload-documents", { method: "POST", body: form });
+    const result = await request("/api/v1/upload-documents", {
+      method: "POST",
+      body: form,
+      timeoutMs: 120000,
+    });
     setStatus("#upload-status", `${result.total_chunks} chunks`, "good");
     $("#upload-results").innerHTML = result.documents
       .map(
